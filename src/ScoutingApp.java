@@ -2,7 +2,7 @@ import java.util.*;
 import java.applet.*;
 import java.io.*;
 import static java.lang.System.*;
-public class Scottingapp {
+public class ScoutingApp {
 
 	public static void main(String[] args) {
 		boolean restart =true;
