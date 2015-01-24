@@ -33,6 +33,7 @@ public class ScoutingApp {
 		String notes = notescan.nextLine();
 		try{
 			FileWriter  File = new FileWriter("Java.txt");
+			FileReader Reader = new FileReader("Java.txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Name:"+team);
 			Printer.println("Teleop Tote Points Earned:"+totepoint);
@@ -44,13 +45,12 @@ public class ScoutingApp {
 			Printer.println("Maximum Litter Height:"+litheight);
 			Printer.println("Totes stacked for cooperation:"+coop);
 			Printer.println("Additional Notes:"+notes);
-			Printer.println("Name of Scout"+name);
+			Printer.println("Name of Scout:"+ name);
 			Printer.println("____________________________________");
 			Printer.close();
 		} catch (IOException e){
+			}
 		}
-		}
-	{
-}
-}
+	
+	}
 }
