@@ -33,7 +33,7 @@ public class ScoutingApp {
 		String notes = notescan.nextLine();
 		try{
 			FileWriter  File = new FileWriter("Java.txt");
-			FileReader Reader = new FileReader("Java.txt");
+			FileReader Reader = new FileReader("Index.txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Name:"+team);
 			Printer.println("Teleop Tote Points Earned:"+totepoint);
