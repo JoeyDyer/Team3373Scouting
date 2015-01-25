@@ -57,14 +57,15 @@ public class Pomasupa {
 
 			
 				}
-			if(choice1.toUpperCase().equals("AMENDS")||choice1.toUpperCase().equals("MAKE AMENDS")){
-				System.out.println("The bartender is still furious, but sees that you are trying to do right.\nHe shows you the horrible mess that you had made the night before");
+			
 			}
 			if(userName.toUpperCase().equals("EXIT")){
 				System.out.println("Bye, Thanks for Playing");
 				playagain = false;
 						}
 					}
+			if(choice1.toUpperCase().equals("AMENDS")||choice1.toUpperCase().equals("MAKE AMENDS")){
+				System.out.println("The bartender is still furious, but sees that you are trying to do right.\nHe shows you the horrible mess that you had made the night before");		
 				}
 			}
 		}
