@@ -34,6 +34,7 @@ public class ScoutingApp {
 		int total = totepoint + auto + canpoints + litpoints + coop;
 		Scanner notescan = new Scanner(System.in);
 		String notes = notescan.nextLine();
+		
 		try{
 			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
 			FileWriter  File = new FileWriter(index.toString() + ".txt");
