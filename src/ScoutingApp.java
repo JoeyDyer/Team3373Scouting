@@ -30,6 +30,8 @@ public class ScoutingApp {
 		System.out.println("Enter totes stacked for cooperation.");
 		int coop = in.nextInt();
 		System.out.println("Please enter additional Notes");
+		int match = in.nextInt();
+		System.out.println("Please enter match number");
 		Scanner notescan = new Scanner(System.in);
 		String notes = notescan.nextLine();
 		try{
@@ -38,6 +40,7 @@ public class ScoutingApp {
 			FileWriter  File = new FileWriter(index.toString() + ".txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Name:"+team);
+			Printer.println("Match Number:"+match);
 			Printer.println("Teleop Tote Points Earned:"+totepoint);
 			Printer.println("Maximum Tote Height:"+toteheight);
 			Printer.println("Autonomous points scored"+auto);
