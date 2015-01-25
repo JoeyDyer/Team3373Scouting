@@ -8,7 +8,7 @@ public class Text_Import {
 	public static void main(String[] args) {
 		
 		try{
-		FileWriter File = new FileWriter("Java.txt");
+		FileWriter File = new FileWriter("Template.txt");
 		PrintWriter Printer = new PrintWriter(File);
 		
 		Printer.println("Did it work?");
