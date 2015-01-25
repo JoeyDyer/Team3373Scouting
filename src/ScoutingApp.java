@@ -2,6 +2,7 @@ import java.util.*;
 import java.applet.*;
 import java.io.*;
 import static java.lang.System.*;
+import java.nio.file.*;
 public class ScoutingApp {
 
 	public static void main(String[] args) {
@@ -32,8 +33,9 @@ public class ScoutingApp {
 		Scanner notescan = new Scanner(System.in);
 		String notes = notescan.nextLine();
 		try{
-			FileWriter  File = new FileWriter("Java.txt");
-			FileReader Reader = new FileReader("Index.txt");
+			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
+			
+			FileWriter  File = new FileWriter(index.toString() + ".txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Name:"+team);
 			Printer.println("Teleop Tote Points Earned:"+totepoint);
@@ -48,6 +50,10 @@ public class ScoutingApp {
 			Printer.println("Name of Scout:"+ name);
 			Printer.println("____________________________________");
 			Printer.close();
+			int i = Integer.valueOf(index);
+			i += 1;
+			index = Integer.toString(i);
+			Files.write(Paths.get("index.txt"), index.getBytes());
 		} catch (IOException e){
 			}
 		}
