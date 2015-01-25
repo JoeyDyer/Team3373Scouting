@@ -1,13 +1,12 @@
-
-Team Name:3373
-Teleop Tote Points Earned:21
-Maximum Tote Height:10
-Autonomous points scored15
-Can stack points:20
-Maximum can stacking height:4
-Litter points:12
-Maximum Litter Height:4
-Totes stacked for cooperation:3
-Additional Notes:UR MAM
-Name of ScoutDillon
+Team Name:1
+Teleop Tote Points Earned:1
+Maximum Tote Height:1
+Autonomous points scored1
+Can stack points:1
+Maximum can stacking height:1
+Litter points:1
+Maximum Litter Height:1
+Totes stacked for cooperation:1
+Additional Notes:1
+Name of Scout:Alex
 ____________________________________
