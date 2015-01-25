@@ -36,7 +36,13 @@ public class Pomasupa {
 					
 				if(choice2.toUpperCase().equals("COOK")){
 					System.out.println("You begin to cook a large bowl of the muck you are going to eat for lunch, but suddenly you drop the pot and ruin a huge amount of food.\nYou get kicked out of the kitchen and are forced to either mine or run for escape now.");
-				
+					String choice6 = in.next();
+					if(choice6.toUpperCase().equals("RUN")){
+						System.out.println("You run for the gate, but are instantly hit by a myriad of arrows.\nWould you like to play again?");
+						String yesno2 = in.next();
+						if(yesno2.toUpperCase().equals("NO")){
+							System.out.println("Thanks for playing!");
+							playagain = false;
 				}
 
 			
@@ -52,4 +58,5 @@ public class Pomasupa {
 				}
 			}
 		}
-
+	}
+}
