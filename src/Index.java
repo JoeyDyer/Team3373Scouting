@@ -8,11 +8,10 @@ public class Index {
 	public static void main(String[] args) {
 		
 		try{
-		FileWriter File = new FileWriter("Java.txt");
+		FileWriter File = new FileWriter("Index.txt");
 		PrintWriter Printer = new PrintWriter(File);
 		
-		Printer.println("Did it work?");
-		Printer.println("YES!!!!");
+		Printer.println("1");
 		
 		Printer.close();
 	} catch (IOException e) {
