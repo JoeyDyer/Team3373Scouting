@@ -320,7 +320,7 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		
-		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1);
+		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
 		btnSubmit.addActionListener(handler);
 	}
 	
@@ -331,13 +331,23 @@ public class Scouting_GUI {
 		private JTextField toteHeight;
 		private JTextField autoPoints;
 		private JTextField canPoints;
-	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6) {
+		private JTextField literPoints;
+		private JTextField literHeight;
+		private JTextField coopPoints;
+		private JTextField addNotes;
+		private JTextField scoutName;
+	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
 			this.targetTeam = textfield1;
 			this.matchNumber = textfield2;
 			this.totePoints = textfield3;
 			this.toteHeight = textfield4;
 			this.autoPoints = textfield5;
 			this.canPoints = textfield6;
+			this.literPoints  = textfield8;
+			this.literHeight = textfield9;
+			this.coopPoints = textfield10;
+			this.addNotes = textfield11;
+			this.scoutName = textfield12;
 		}
 		public void actionPerformed(ActionEvent event){
 			try{
@@ -351,10 +361,10 @@ public class Scouting_GUI {
 				Printer.println("Autonomous points scored:"+ autoPoints.getText());
 				Printer.println("Can stack points:"+ canPoints.getText());
 				Printer.println("Maximum can stacking height:"+ gbc_txtEnterMaximumHeight_1);
-				Printer.println("Litter points:"+ gbc_txtEnterPointsEarned_2);
-				Printer.println("Maximum Litter Height:"+ gbc_txtEnterNumberOf);
-				Printer.println("Points earned by coopertition:"+ gbc_txtEnterPointsEarned_3);
-				Printer.println("Additional Notes:"+ gbc_txtEnterAdditionalNotes);
+				Printer.println("Litter points:"+ literPoints);
+				Printer.println("Maximum Litter Height:"+ literHeight);
+				Printer.println("Points earned by coopertition:"+ coopPoints);
+				Printer.println("Additional Notes:"+ addNotes);
 				Printer.println("Name of Scout:"+ gbc_txtEnterYourName);
 				Printer.println("____________________________________");
 				Printer.close();
