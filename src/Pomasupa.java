@@ -65,9 +65,10 @@ public class Pomasupa {
 						}
 					}
 			if(choice1.toUpperCase().equals("AMENDS")||choice1.toUpperCase().equals("MAKE AMENDS")){
-				System.out.println("The bartender is still furious, but sees that you are trying to do right.\nHe shows you the horrible mess that you had made the night before");		
+				System.out.println("The bartender is still furious, but sees that you are trying to do right when you begin to beg for forgiveness.\nHe shows you the horrible mess that you had made the night before");		
 				}
+			}
 			}
 		}
 	}
-}
+
