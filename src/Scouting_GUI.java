@@ -1,5 +1,4 @@
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import java.awt.BorderLayout;
 import javax.swing.JButton;
@@ -9,7 +8,6 @@ import java.awt.Insets;
 import javax.swing.JTextField;
 import javax.swing.JSplitPane;
 import javax.swing.JLabel;
-
 
 public class Scouting_GUI {
 
