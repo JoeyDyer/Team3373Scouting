@@ -8,7 +8,7 @@ public class Pomasupa {
 		System.out.println("Type 'Play' to play.");	
 		String userName = in.next();
 		if(userName.toUpperCase().equals("PLAY")){
-			System.out.println("You wake up in a strange tavern in a strange town. \nAs you try to stand up you feel naseous and unfortunatly do not have any recollection of how you got there. \nYou stagger over to the bartender and ask about your location.\n'If you think I am going to help you at all after you what you did last night... You must be crazier than I thought'");
+			System.out.println("You wake up in a strange tavern in a strange town. \nAs you try to stand up you feel naseous and unfortunatly do not have any recollection of how you got there or who you are. \nYou stagger over to the bartender and ask about your location.\n'If you think I am going to help you at all after you what you did last night... You must be crazier than I thought'");
 			System.out.println("You try to explain that you have no idea what he is talking about, but he does not care.\nYou now have to either threaten him or attempt to make amends.");
 			String choice1 = in.next();
 			if(choice1.toUpperCase().equals("THREATEN")|| choice1.toUpperCase().equals("THREATEN HIM")){
@@ -23,6 +23,16 @@ public class Pomasupa {
 						if(choice4.toUpperCase().equals("NORTH")){
 							System.out.println("You run as fast as you can to the north.\nYou eventually end up near a farm.\nYou must now either choose to ask for hospitality or run past the farm./nNote: You are wanted for escaping the prison.");
 							}
+						if(choice4.toUpperCase().equals("SOUTH")){
+							System.out.println("You run to the south, but soon realize how stupid you are...\nYou walked right back to the prison.\nYou are brought back to the prison and sentenced to be executed.");
+							}
+						if(choice4.toUpperCase().equals("EAST")){
+							System.out.println("You run to East as fast as possible and come into a forest.\n Out of nowhere a bear mauls you and you die.\nDo you want to play again? Yes or No");
+							String yesno3 = in.next();
+							if(yesno3.toUpperCase().equals("NO")){
+								playagain = false;
+							}
+						}
 						}
 					}
 				if(choice2.toUpperCase().equals("RUN")){
