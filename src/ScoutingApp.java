@@ -59,6 +59,7 @@ public class ScoutingApp {
 			Files.write(Paths.get("index.txt"), index.getBytes());
 		} catch (IOException e){
 			}
+		System.out.println("Thank you! Now starting next round!");
 		}
 	
 	}
