@@ -36,13 +36,13 @@ public class ScoutingApp {
 		Scanner notescan = new Scanner(System.in);
 		try{
 			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-			FileWriter  File = new FileWriter(index.toString() + ".txt");
+			FileWriter  File = new FileWriter(index.toString() + "(" + team + ").txt");
 			PrintWriter Printer = new PrintWriter(File);
-			Printer.println("Team Name:"+team);
+			Printer.println("Team Number:"+team);
 			Printer.println("Match Number:"+ match);
 			Printer.println("Teleop Tote Points Earned:"+totepoint);
 			Printer.println("Maximum Tote Height:"+toteheight);
-			Printer.println("Autonomous points scored"+auto);
+			Printer.println("Autonomous points scored:"+auto);
 			Printer.println("Can stack points:"+canpoints);
 			Printer.println("Maximum can stacking height:"+canheight);
 			Printer.println("Litter points:"+litpoints);
