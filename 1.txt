@@ -1,0 +1,13 @@
+Team Name:1
+Match Number:1
+Teleop Tote Points Earned:1
+Maximum Tote Height:1
+Autonomous points scored1
+Can stack points:1
+Maximum can stacking height:1
+Litter points:1
+Maximum Litter Height:1
+Points earned by coopertition:1
+Additional Notes:
+Name of Scout:Alex
+____________________________________
