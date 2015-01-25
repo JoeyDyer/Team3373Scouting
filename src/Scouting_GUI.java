@@ -24,33 +24,33 @@ import javax.swing.JLabel;
 
 public class Scouting_GUI {
 
-	private JFrame frame;
+	public JFrame frame;
 	public JTextField txtEnterYourName;
-	private JTextField txtEnterMatchNumber;
-	private JTextField txtEnterTargetTeam;
-	private JTextField txtEnterPointsEarned;
-	private JTextField txtEnterMaximumHeight;
-	private JTextField txtEnterPointsScored;
-	private JTextField txtEnterPointsEarned_1;
-	private JTextField txtEnterMaximumHeight_1;
-	private JTextField txtEnterPointsEarned_2;
-	private JTextField txtEnterNumberOf;
-	private JTextField txtEnterPointsEarned_3;
-	private JButton btnSubmit;
-	private JLabel lblName;
-	private JLabel lblMatch;
-	private JTextField txtEnterAdditionalNotes;
-	private JLabel lblTeamNumber;
-	private JLabel lblTotePoints;
-	private JLabel lblToteHeight;
-	private JLabel lblAutonomousPoints;
-	private JLabel lblTeamScoutingApplication;
-	private JLabel lblCanPoints;
-	private JLabel lblCanHeight;
-	private JLabel lblLitterPoints;
-	private JLabel lblLitterHeight;
-	private JLabel lblCoopertitionPoints;
-	private JLabel lblAdditionalNotes;
+	public JTextField txtEnterMatchNumber;
+	public JTextField txtEnterTargetTeam;
+	public JTextField txtEnterPointsEarned;
+	public JTextField txtEnterMaximumHeight;
+	public JTextField txtEnterPointsScored;
+	public JTextField txtEnterPointsEarned_1;
+	public JTextField txtEnterMaximumHeight_1;
+	public JTextField txtEnterPointsEarned_2;
+	public JTextField txtEnterNumberOf;
+	public JTextField txtEnterPointsEarned_3;
+	public JButton btnSubmit;
+	public JLabel lblName;
+	public JLabel lblMatch;
+	public JTextField txtEnterAdditionalNotes;
+	public JLabel lblTeamNumber;
+	public JLabel lblTotePoints;
+	public JLabel lblToteHeight;
+	public JLabel lblAutonomousPoints;
+	public JLabel lblTeamScoutingApplication;
+	public JLabel lblCanPoints;
+	public JLabel lblCanHeight;
+	public JLabel lblLitterPoints;
+	public JLabel lblLitterHeight;
+	public JLabel lblCoopertitionPoints;
+	public JLabel lblAdditionalNotes;
 	GridBagConstraints gbc_lblTeamScoutingApplication = new GridBagConstraints();
 	GridBagConstraints gbc_txtEnterYourName = new GridBagConstraints();
 	GridBagConstraints gbc_txtEnterTargetTeam = new GridBagConstraints();
@@ -322,21 +322,33 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		
-		HandlerClass handler = new HandlerClass();
+		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored);
 		btnSubmit.addActionListener(handler);
 	}
 	
 	private class HandlerClass implements ActionListener{
+		private JTextField targetTeam;
+		private JTextField matchNumber;
+		private JTextField totePoints;
+		private JTextField toteHeight;
+		private JTextField autoPoints;
+	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5) {
+			this.targetTeam = textfield1;
+			this.matchNumber = textfield2;
+			this.totePoints = textfield3;
+			this.toteHeight = textfield4;
+			this.autoPoints = textfield5;
+		}
 		public void actionPerformed(ActionEvent event){
 			try{
 				String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-				FileWriter  File = new FileWriter(index.toString() + "(" + gbc_txtEnterTargetTeam + ").txt");
+				FileWriter  File = new FileWriter(index.toString() + "(" + targetTeam.getText() + ").txt");
 				PrintWriter Printer = new PrintWriter(File);
-				Printer.println("Team Number:"+ gbc_txtEnterTargetTeam);
-				Printer.println("Match Number:"+ gbc_txtEnterMatchNumber);
-				Printer.println("Teleop Tote Points Earned:"+ gbc_txtEnterPointsEarned);
-				Printer.println("Maximum Tote Height:"+ gbc_txtEnterMaximumHeight);
-				Printer.println("Autonomous points scored:"+gbc_txtEnterPointsScored);
+				Printer.println("Team Number:"+ targetTeam.getText());
+				Printer.println("Match Number:"+ matchNumber.getText());
+				Printer.println("Teleop Tote Points Earned:"+ totePoints.getText());
+				Printer.println("Maximum Tote Height:"+ toteHeight.getText());
+				Printer.println("Autonomous points scored:"+ autoPoints.getText());
 				Printer.println("Can stack points:"+ gbc_txtEnterPointsEarned_1);
 				Printer.println("Maximum can stacking height:"+ gbc_txtEnterMaximumHeight_1);
 				Printer.println("Litter points:"+ gbc_txtEnterPointsEarned_2);
