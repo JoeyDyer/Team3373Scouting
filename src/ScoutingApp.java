@@ -31,11 +31,11 @@ public class ScoutingApp {
 		System.out.println("Please enter additional Notes");
 		int match = in.nextInt();
 		System.out.println("Please enter match number");
+		int total = totepoint + auto + canpoints + litpoints + coop;
 		Scanner notescan = new Scanner(System.in);
 		String notes = notescan.nextLine();
 		try{
 			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-			
 			FileWriter  File = new FileWriter(index.toString() + ".txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Name:"+team);
@@ -47,10 +47,12 @@ public class ScoutingApp {
 			Printer.println("Maximum can stacking height:"+canheight);
 			Printer.println("Litter points:"+litpoints);
 			Printer.println("Maximum Litter Height:"+litheight);
-			Printer.println("Totes stacked for cooperation:"+coop);
+			Printer.println("Points earned by coopertition:"+coop);
 			Printer.println("Additional Notes:"+notes);
 			Printer.println("Name of Scout:"+ name);
 			Printer.println("____________________________________");
+			Printer.close();
+			Printer.println("Total Points:"+ total);
 			Printer.close();
 			int i = Integer.valueOf(index);
 			i += 1;
