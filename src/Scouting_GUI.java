@@ -11,6 +11,11 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import javax.swing.JTextField;
 import javax.swing.JSplitPane;
@@ -20,7 +25,7 @@ import javax.swing.JLabel;
 public class Scouting_GUI {
 
 	private JFrame frame;
-	private JTextField txtEnterYourName;
+	public JTextField txtEnterYourName;
 	private JTextField txtEnterMatchNumber;
 	private JTextField txtEnterTargetTeam;
 	private JTextField txtEnterPointsEarned;
@@ -46,6 +51,20 @@ public class Scouting_GUI {
 	private JLabel lblLitterHeight;
 	private JLabel lblCoopertitionPoints;
 	private JLabel lblAdditionalNotes;
+	GridBagConstraints gbc_lblTeamScoutingApplication = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterYourName = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterTargetTeam = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterMatchNumber = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterPointsScored = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterPointsEarned = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterMaximumHeight = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterPointsEarned_1 = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterMaximumHeight_1 = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterPointsEarned_2 = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterNumberOf = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterAdditionalNotes = new GridBagConstraints();
+	GridBagConstraints gbc_txtEnterPointsEarned_3 = new GridBagConstraints();
+	
 
 	/**
 	 * Launch the application.
@@ -309,6 +328,32 @@ public class Scouting_GUI {
 	
 	private class HandlerClass implements ActionListener{
 		public void actionPerformed(ActionEvent event){
+			try{
+				String index = Files.readAllLines(Paths.get("index.txt")).get(0);
+				FileWriter  File = new FileWriter(index.toString() + "(" + gbc_txtEnterTargetTeam + ").txt");
+				PrintWriter Printer = new PrintWriter(File);
+				Printer.println("Team Number:"+ gbc_txtEnterTargetTeam);
+				Printer.println("Match Number:"+ gbc_txtEnterMatchNumber);
+				Printer.println("Teleop Tote Points Earned:"+ gbc_txtEnterPointsEarned);
+				Printer.println("Maximum Tote Height:"+ gbc_txtEnterMaximumHeight);
+				Printer.println("Autonomous points scored:"+gbc_txtEnterPointsScored);
+				Printer.println("Can stack points:"+ gbc_txtEnterPointsEarned_1);
+				Printer.println("Maximum can stacking height:"+ gbc_txtEnterMaximumHeight_1);
+				Printer.println("Litter points:"+ gbc_txtEnterPointsEarned_2);
+				Printer.println("Maximum Litter Height:"+ gbc_txtEnterNumberOf);
+				Printer.println("Points earned by coopertition:"+ gbc_txtEnterPointsEarned_3);
+				Printer.println("Additional Notes:"+ gbc_txtEnterAdditionalNotes);
+				Printer.println("Name of Scout:"+ gbc_txtEnterYourName);
+				Printer.println("____________________________________");
+				Printer.close();
+				//Printer.println("Total Points:"+ total);
+				Printer.close();
+				int i = Integer.valueOf(index);
+				i += 1;
+				index = Integer.toString(i);
+				Files.write(Paths.get("index.txt"), index.getBytes());
+			} catch (IOException e){
+				}
 			
 		}
 	}

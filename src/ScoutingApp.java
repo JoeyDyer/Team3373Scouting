@@ -36,7 +36,7 @@ public class ScoutingApp {
 		Scanner notescan = new Scanner(System.in);
 		try{
 			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-			FileWriter  File = new FileWriter(index.toString() + ".txt");
+			FileWriter  File = new FileWriter(index.toString() + "(" + team + ").txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Number:"+team);
 			Printer.println("Match Number:"+ match);
