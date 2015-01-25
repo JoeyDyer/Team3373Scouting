@@ -8,9 +8,9 @@ public class ScoutingApp {
 		boolean restart =true;
 		while(restart){
 		Scanner in = new Scanner(System.in);
-		System.out.println("Please Enter your name");
+		System.out.println("Please Enter your name.");
 		String name = in.nextLine();
-		System.out.println("Enter Team Number");
+		System.out.println("Enter Team Number.");
 		int team = in.nextInt();
 		System.out.println("Enter Points earned by totes.");
 		int totepoint = in.nextInt();
@@ -20,18 +20,19 @@ public class ScoutingApp {
 		int auto = in.nextInt();
 		System.out.println("Enter can points.");
 		int canpoints = in.nextInt();
-		System.out.println("Enter maximum can height ontop of totes");
+		System.out.println("Enter maximum can height ontop of totes.");
 		int canheight = in.nextInt();
-		System.out.println("Enter litter points");
+		System.out.println("Enter litter points.");
 		int litpoints = in.nextInt();
 		System.out.println("Enter maximum height litter is put in the can by team.");
 		int litheight = in.nextInt();
 		System.out.println("Enter totes stacked for cooperation.");
 		int coop = in.nextInt();
-		System.out.println("Please enter additional Notes");
+		System.out.println("Please enter match number.");
+		int match = in.nextInt();
+		System.out.println("Please enter additional Notes.");
 		int total = totepoint + auto + canpoints + litpoints + coop;
-		Scanner notescan = new Scanner(System.in);
-		String notes = notescan.nextLine();
+		String notes = in.nextLine();
 		
 		try{
 			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
