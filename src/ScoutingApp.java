@@ -8,6 +8,9 @@ public class ScoutingApp {
 		boolean restart =true;
 		while(restart){
 		Scanner in = new Scanner(System.in);
+		Scanner matchscan = new Scanner(System.in);
+		System.out.println("Enter match number");
+		int match = matchscan.nextInt();
 		System.out.println("Please Enter your name");
 		String name = in.nextLine();
 		System.out.println("Enter Team Number");
@@ -32,13 +35,12 @@ public class ScoutingApp {
 		int total = totepoint + auto + canpoints + litpoints + coop;
 		Scanner notescan = new Scanner(System.in);
 		String notes = notescan.nextLine();
-		
 		try{
 			String index = Files.readAllLines(Paths.get("index.txt")).get(0);
 			FileWriter  File = new FileWriter(index.toString() + ".txt");
 			PrintWriter Printer = new PrintWriter(File);
 			Printer.println("Team Name:"+team);
-			Printer.println("Match Number:");
+			Printer.println("Match Number:"+ match);
 			Printer.println("Teleop Tote Points Earned:"+totepoint);
 			Printer.println("Maximum Tote Height:"+toteheight);
 			Printer.println("Autonomous points scored"+auto);
