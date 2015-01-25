@@ -1,7 +1,5 @@
 import java.util.*;
-import java.applet.*;
 import java.io.*;
-import static java.lang.System.*;
 public class ScoutingApp {
 
 	public static void main(String[] args) {
@@ -48,9 +46,8 @@ public class ScoutingApp {
 			Printer.println("Name of Scout:"+ name);
 			Printer.println("____________________________________");
 			Printer.close();
-		} catch (IOException e){
+		}catch (IOException e){
 			}
 		}
-	
 	}
 }
