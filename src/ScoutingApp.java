@@ -31,8 +31,6 @@ public class ScoutingApp {
 		int litheight = in.nextInt();
 		System.out.println("Enter totes stacked for cooperation.");
 		int coop = in.nextInt();
-		System.out.println("Please enter match number.");
-		System.out.println("Please enter additional Notes.");
 		int total = totepoint + auto + canpoints + litpoints + coop;
 		String notes = in.nextLine();
 		Scanner notescan = new Scanner(System.in);
