@@ -320,7 +320,7 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		
-		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored);
+		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1);
 		btnSubmit.addActionListener(handler);
 	}
 	
@@ -330,12 +330,14 @@ public class Scouting_GUI {
 		private JTextField totePoints;
 		private JTextField toteHeight;
 		private JTextField autoPoints;
-	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5) {
+		private JTextField canPoints;
+	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6) {
 			this.targetTeam = textfield1;
 			this.matchNumber = textfield2;
 			this.totePoints = textfield3;
 			this.toteHeight = textfield4;
 			this.autoPoints = textfield5;
+			this.canPoints = textfield6;
 		}
 		public void actionPerformed(ActionEvent event){
 			try{
@@ -347,7 +349,7 @@ public class Scouting_GUI {
 				Printer.println("Teleop Tote Points Earned:"+ totePoints.getText());
 				Printer.println("Maximum Tote Height:"+ toteHeight.getText());
 				Printer.println("Autonomous points scored:"+ autoPoints.getText());
-				Printer.println("Can stack points:"+ gbc_txtEnterPointsEarned_1);
+				Printer.println("Can stack points:"+ canPoints.getText());
 				Printer.println("Maximum can stacking height:"+ gbc_txtEnterMaximumHeight_1);
 				Printer.println("Litter points:"+ gbc_txtEnterPointsEarned_2);
 				Printer.println("Maximum Litter Height:"+ gbc_txtEnterNumberOf);
