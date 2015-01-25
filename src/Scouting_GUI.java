@@ -296,5 +296,14 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridx = 0;
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
+		
+		HandlerClass handler = new HandlerClass();
+		btnSubmit.addActionListener(handler);
+	}
+	
+	private class HandlerClass implements ActionListener{
+		public void actionPerformed(ActionEvent event){
+			
+		}
 	}
 }
