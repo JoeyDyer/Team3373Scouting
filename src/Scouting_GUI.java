@@ -363,11 +363,11 @@ public class Scouting_GUI {
 				Printer.println("Autonomous points scored:"+ autoPoints.getText());
 				Printer.println("Can stack points:"+ canPoints.getText());
 				Printer.println("Maximum can stacking height:"+ canHeight.getText());
-				Printer.println("Litter points:"+ literPoints);
-				Printer.println("Maximum Litter Height:"+ literHeight);
-				Printer.println("Points earned by coopertition:"+ coopPoints);
-				Printer.println("Additional Notes:"+ addNotes);
-				Printer.println("Name of Scout:"+ gbc_txtEnterYourName);
+				Printer.println("Litter points:"+ literPoints.getText());
+				Printer.println("Maximum Litter Height:"+ literHeight.getText());
+				Printer.println("Points earned by coopertition:"+ coopPoints.getText());
+				Printer.println("Additional Notes:"+ addNotes.getText());
+				Printer.println("Name of Scout:"+ scoutName.getText());
 				Printer.println("____________________________________");
 				Printer.close();
 				//Printer.println("Total Points:"+ total);
