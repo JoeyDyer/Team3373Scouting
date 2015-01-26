@@ -320,7 +320,7 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		
-		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
+		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName, txtEnterMaximumHeight_1);
 		btnSubmit.addActionListener(handler);
 	}
 	
@@ -336,13 +336,15 @@ public class Scouting_GUI {
 		private JTextField coopPoints;
 		private JTextField addNotes;
 		private JTextField scoutName;
-	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
+		private JTextField canHeight;
+	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield7, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
 			this.targetTeam = textfield1;
 			this.matchNumber = textfield2;
 			this.totePoints = textfield3;
 			this.toteHeight = textfield4;
 			this.autoPoints = textfield5;
 			this.canPoints = textfield6;
+			this.canHeight = textfield7;
 			this.literPoints  = textfield8;
 			this.literHeight = textfield9;
 			this.coopPoints = textfield10;
@@ -360,7 +362,7 @@ public class Scouting_GUI {
 				Printer.println("Maximum Tote Height:"+ toteHeight.getText());
 				Printer.println("Autonomous points scored:"+ autoPoints.getText());
 				Printer.println("Can stack points:"+ canPoints.getText());
-				Printer.println("Maximum can stacking height:"+ gbc_txtEnterMaximumHeight_1);
+				Printer.println("Maximum can stacking height:"+ canHeight.getText());
 				Printer.println("Litter points:"+ literPoints);
 				Printer.println("Maximum Litter Height:"+ literHeight);
 				Printer.println("Points earned by coopertition:"+ coopPoints);
