@@ -1,4 +1,5 @@
 import java.awt.EventQueue;
+
 import javax.swing.JFrame;
 
 import java.awt.BorderLayout;
@@ -16,6 +17,7 @@ import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JSplitPane;
 import javax.swing.JLabel;
@@ -331,12 +333,12 @@ public class Scouting_GUI {
 		private JTextField toteHeight;
 		private JTextField autoPoints;
 		private JTextField canPoints;
+		private JTextField canHeight;
 		private JTextField literPoints;
 		private JTextField literHeight;
 		private JTextField coopPoints;
 		private JTextField addNotes;
 		private JTextField scoutName;
-		private JTextField canHeight;
 	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield7, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
 			this.targetTeam = textfield1;
 			this.matchNumber = textfield2;
@@ -378,6 +380,7 @@ public class Scouting_GUI {
 				Files.write(Paths.get("index.txt"), index.getBytes());
 			} catch (IOException e){
 				}
+			JOptionPane.showMessageDialog(null, "Scout Sheet Submitted. Thank you!");
 		}
 	}
 }
