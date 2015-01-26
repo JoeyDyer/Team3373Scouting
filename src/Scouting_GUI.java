@@ -322,7 +322,7 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		
-		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName, txtEnterMaximumHeight_1);
+		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
 		btnSubmit.addActionListener(handler);
 	}
 	
