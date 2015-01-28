@@ -1,5 +1,6 @@
 import java.awt.EventQueue;
 
+import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 import java.awt.BorderLayout;
@@ -11,9 +12,11 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.RenderedImage;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -21,8 +24,11 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JSplitPane;
 import javax.swing.JLabel;
+
 import java.awt.Color;
+
 import javax.swing.ImageIcon;
+
 import java.awt.Font;
 
 public class Scouting_GUI {
@@ -345,6 +351,8 @@ public class Scouting_GUI {
 		gbc_lblAdditionalNotes.gridx = 4;
 		gbc_lblAdditionalNotes.gridy = 12;
 		frame.getContentPane().add(lblAdditionalNotes, gbc_lblAdditionalNotes);
+		
+
 		
 		lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Joey\\Pictures\\Robo_Pink_normal.jpg"));
