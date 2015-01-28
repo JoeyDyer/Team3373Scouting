@@ -355,7 +355,7 @@ public class Scouting_GUI {
 
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Joey\\Pictures\\Robo_Pink_normal.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("Robo_Pink_normal.jpg"));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_1.gridx = 2;
