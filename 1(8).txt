@@ -1,0 +1,13 @@
+Team Number:8
+Match Number:23
+Teleop Tote Points Earned:34
+Maximum Tote Height:89
+Autonomous points scored:27
+Can stack points:23
+Maximum can stacking height:41
+Litter points:21
+Maximum Litter Height:24
+Points earned by coopertition:73
+Additional Notes:test
+Name of Scout:test
+____________________________________

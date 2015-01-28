@@ -1,0 +1,13 @@
+Team Number:3323
+Match Number:12
+Teleop Tote Points Earned:23
+Maximum Tote Height:43
+Autonomous points scored:1
+Can stack points:12
+Maximum can stacking height:2
+Litter points:32
+Maximum Litter Height:21
+Points earned by coopertition:75
+Additional Notes:testing
+Name of Scout:Joey
+____________________________________
