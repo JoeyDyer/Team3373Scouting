@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import java.awt.BorderLayout;
 
 import javax.swing.JButton;
-
+import java.awt.*;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
@@ -19,11 +19,13 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import javax.swing.*;
 
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JSplitPane;
 import javax.swing.JLabel;
+import java.security.*;
 
 import java.awt.Color;
 
@@ -167,7 +169,7 @@ public class Scouting_GUI {
 		gbc_lblMatch.gridy = 2;
 		frame.getContentPane().add(lblMatch, gbc_lblMatch);
 		
-		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
+		//HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
 		
 		txtEnterTargetTeam = new JTextField();
 		txtEnterTargetTeam.setText("Enter Target Team Number");
@@ -362,6 +364,8 @@ public class Scouting_GUI {
 		gbc_lblNewLabel_1.gridy = 13;
 		frame.getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 		
+		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
+		
 		btnSubmit = new JButton("Submit");
 		btnSubmit.setBackground(Color.WHITE);
 		GridBagConstraints gbc_btnSubmit = new GridBagConstraints();
@@ -372,6 +376,7 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		btnSubmit.addActionListener(handler);
+		
 	}
 	
 	private class HandlerClass implements ActionListener{
