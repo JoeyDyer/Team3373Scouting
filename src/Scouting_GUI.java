@@ -106,7 +106,7 @@ public class Scouting_GUI {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Times New Roman", Font.PLAIN, 11));
-		frame.getContentPane().setBackground(Color.WHITE);
+		frame.getContentPane().setBackground(new Color(255, 20, 147));
 		frame.setBounds(100, 100, 627, 602);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		GridBagLayout gridBagLayout = new GridBagLayout();
@@ -355,10 +355,10 @@ public class Scouting_GUI {
 
 		
 		lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("Robo_Pink_normal.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("rsz_robo_pink_burned.png"));
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_1.gridx = 2;
+		gbc_lblNewLabel_1.gridx = 4;
 		gbc_lblNewLabel_1.gridy = 13;
 		frame.getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 		
