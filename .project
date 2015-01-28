@@ -14,11 +14,4 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>logo</name>
-			<type>1</type>
-			<location>C:/Users/Joey/Pictures/Robo_Pink_normal.jpg</location>
-		</link>
-	</linkedResources>
 </projectDescription>
