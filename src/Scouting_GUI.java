@@ -409,7 +409,7 @@ public class Scouting_GUI {
 		public void actionPerformed(ActionEvent event){
 			try{
 				String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-				FileWriter  File = new FileWriter(index.toString() + "(" + targetTeam.getText() + ").txt");
+				FileWriter  File = new FileWriter(matchNumber.getText() + "(" + targetTeam.getText() + ").txt");
 				PrintWriter Printer = new PrintWriter(File);
 				Printer.println("Team Number:"+ targetTeam.getText());
 				Printer.println("Match Number:"+ matchNumber.getText());
