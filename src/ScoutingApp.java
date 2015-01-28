@@ -3,7 +3,6 @@ import java.io.*;
 import static java.lang.System.*;
 import java.nio.file.*;
 public class ScoutingApp {
-
 	public static void main(String[] args) {
 		boolean restart =true;
 		while(restart){
