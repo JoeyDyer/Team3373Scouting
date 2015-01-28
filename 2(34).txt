@@ -1,0 +1,13 @@
+Team Number:34
+Match Number:21
+Teleop Tote Points Earned:12
+Maximum Tote Height:4
+Autonomous points scored:89
+Can stack points:26
+Maximum can stacking height:2
+Litter points:0
+Maximum Litter Height:0
+Points earned by coopertition:40
+Additional Notes:This team has no capabilites for liter
+Name of Scout:Joey Dyer
+____________________________________
