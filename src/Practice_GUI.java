@@ -43,6 +43,7 @@ public class Practice_GUI {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	private int x = 0, y = 0;
 	private void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
@@ -59,7 +60,8 @@ public class Practice_GUI {
 	private class HandlerClass implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			
-			JOptionPane.showMessageDialog(null, "Hi Matthew! -_-");
+			JOptionPane.showMessageDialog(null, x);
+			x= x + 1;
 		}
 	}
 
