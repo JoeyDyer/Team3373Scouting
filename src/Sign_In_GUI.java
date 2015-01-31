@@ -16,6 +16,8 @@ import java.awt.event.ActionListener;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -25,6 +27,8 @@ import javax.swing.JToggleButton;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
+
+
 
 
 
@@ -104,7 +108,7 @@ public class Sign_In_GUI {
 		
 		JButton btnSignIn = new JButton("Sign In");
 		btnSignIn.setBounds(30, 208, 87, 29);
-		frame.getContentPane().add(btnSignIn);
+		frame.getContentPane().add(btnSignIn);		
 		
 		JButton btnSignOut = new JButton("Sign Out");
 		btnSignOut.setBounds(213, 208, 98, 29);
@@ -113,30 +117,55 @@ public class Sign_In_GUI {
 			}
 		});
 		frame.getContentPane().add(btnSignOut);
-		btnSignIn.addActionListener(new Action());
-		btnSignOut.addActionListener(new Action.Actio());
-		
+		btnSignIn.addActionListener(new Action(txtPleaseEnterFirst, txtPleaseEnterThe));
+		btnSignOut.addActionListener(new Action.Actio(txtPleaseEnterFirst, txtPleaseEnterThe));
 	}
-	static class Action implements ActionListener{
+
+		}
+	 class Action implements ActionListener{
+		private JTextField memberName;
+		private JTextField currentTime;
+	public Action(JTextField textfield1, JTextField textfield2) {
+			this.memberName = textfield1;
+			this.currentTime = textfield2;
+	
+}
+		
 		
 		public void actionPerformed(ActionEvent e){
-			JFrame wow = new JFrame("Hoi");
-			wow.setVisible(true);
-			wow.setSize(222,222);
-			JLabel label = new JLabel("YAY!");
-			JPanel panel = new JPanel();
-			wow.add(panel);
-			panel.add(label);
+			try{
+				String index = Files.readAllLines(Paths.get("index.txt")).get(0);
+				FileWriter  File = new FileWriter("Present_Members.txt");
+				PrintWriter Printer = new PrintWriter(File);
+				Printer.println("Name:" + memberName.getText());
+				Printer.println("Time:" + currentTime.getText());
+				Printer.println("----------------------------------");
+				Printer.close();
+				//Printer.println("Total Points:"+ total);
+				Printer.close();
+				int i = Integer.valueOf(index);
+				i += 1;
+				index = Integer.toString(i);
+				Files.write(Paths.get("index.txt"), index.getBytes());
+			} catch (IOException Action){
+				}
+			JOptionPane.showMessageDialog(null, "Signed In! Welcome!");
 			
 		}
 		
 		static class Actio implements ActionListener{
-			
+			public JTextField memberName;
+			public JTextField currentTime;
+		public Actio(JTextField textfield1, JTextField textfield2) {
+				this.memberName = textfield1;
+				this.currentTime = textfield2;
+		
+	}
 			public void actionPerformed(ActionEvent e){
 				JFrame wow = new JFrame("Boi");
 				wow.setVisible(true);
 				wow.setSize(222,222);
-				JLabel label = new JLabel("AWW!");
+				JLabel label = new JLabel(currentTime.getText());
 				JPanel panel = new JPanel();
 				wow.add(panel);
 				panel.add(label);
@@ -150,7 +179,7 @@ public class Sign_In_GUI {
 }
 
 
-			    }
+			    
 			  
 			
 
