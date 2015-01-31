@@ -1,0 +1,13 @@
+Team Number:Enter Target Team Number
+Match Number:Enter Match Number
+Teleop Tote Points Earned:Enter Points Earned by Tote Stacking
+Maximum Tote Height:Enter Maximum Height of Totes Stacked
+Autonomous points scored:Enter Points Scored in Autonomous
+Can stack points:Enter Points Earned with Cans
+Maximum can stacking height:Enter Maximum Height of Stacked Cans
+Litter points:Enter Points Earned by Litter
+Maximum Litter Height:Enter Number of Totes Litter is Scored On
+Points earned by coopertition:Enter Points Earned by Coopertition
+Additional Notes:Enter Additional Notes Here
+Name of Scout:test
+____________________________________

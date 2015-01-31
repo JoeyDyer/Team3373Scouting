@@ -111,36 +111,27 @@ public class Sign_In_GUI {
 		});
 		frame.getContentPane().add(btnSignOut);
 		
-		
-		
-	event e = new event();
-	btnSignIn.addActionListener(e);
-	
-	event ee = new event();
-	btnSignOut.addActionListener(ee);
+		 class MyFrame extends JFrame implements ActionListener {
+			  public JButton btnSignIn = new JButton("Sign In");
+			  public JButton btnSignOut = new JButton("Sign Out");
 
-		} 
+			  public MyFrame() {
+			    btnSignIn.addActionListener(this);
+			    btnSignOut.addActionListener(this);
+			  }
 
-	public class event implements ActionListener {
-		public void actionPerformed(ActionEvent e){
-			
-			JOptionPane.showMessageDialog(null, "Signed In!");
-			
-		
-	// class event implements ActionListener {
-		//		public void actionPerformed(ActionEvent ee){
-					
-			//		JOptionPane.showMessageDialog(null, "Signed Out!");
-		}
-	}
-
-	
+			  public void actionPerformed(ActionEvent evt) {
+			    Object src = evt.getSource();
+			    if (src == btnSignIn) {
+			    	JOptionPane.showMessageDialog(null, "POMASUPA \n IS THA \n BESTEREST?!?!?!");
+			    } else if (src == btnSignOut) {
+			    	JOptionPane.showMessageDialog(null, "NOOOOOOO!");
+			    }
+			  }
+			}
 
 		
 
 
 }
-	
-
-
-
+}
