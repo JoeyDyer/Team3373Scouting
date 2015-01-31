@@ -105,7 +105,7 @@ public class Sign_In_GUI {
 		frame.getContentPane().add(btnSignIn);		
 		
 		DateFormat txtPleaseEnterThe = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-		Date dateobj = new Date();
+		Date txtPleaseEnterThe2 = new Date();
 		
 		JButton btnSignOut = new JButton("Sign Out");
 		btnSignOut.setBounds(213, 208, 98, 29);
@@ -121,8 +121,8 @@ public class Sign_In_GUI {
 		}
 	 class Action implements ActionListener{
 		private JTextField memberName;
-		private JTextField currentTime;
-	public Action(JTextField textfield1, JTextField textfield2) {
+		private DateFormat currentTime;
+	public Action(JTextField textfield1, DateFormat textfield2) {
 			this.memberName = textfield1;
 			this.currentTime = textfield2;
 	
@@ -130,10 +130,14 @@ public class Sign_In_GUI {
 		
 		
 		public void actionPerformed(ActionEvent e){
+			GregorianCalendar date = new GregorianCalendar();
+			int minute, hour;
+			hour = date.get(Calendar.HOUR);
+			minute = date.get(Calendar.MINUTE);
 			FileWriter fStream;
 			try{				
 				fStream = new FileWriter("Present_Members.txt", true);
-				fStream.append(memberName.getText() + " Signed IN!                      IN   " + currentTime.getText());
+				fStream.append(memberName.getText() + " Signed IN!                      IN   " + hour + ":" + minute);
 				fStream.append(System.getProperty("line.separator"));
 				fStream.flush();
 				fStream.close();
@@ -152,17 +156,21 @@ public class Sign_In_GUI {
 		
 		static class Actio implements ActionListener{
 			public JTextField memberName;
-			public JTextField currentTime;
-		public Actio(JTextField textfield1, JTextField textfield2) {
+			public DateFormat currentTime;
+		public Actio(JTextField textfield1, DateFormat textfield2) {
 				this.memberName = textfield1;
 				this.currentTime = textfield2;
 
 	}
 			public void actionPerformed(ActionEvent e){
+				GregorianCalendar date = new GregorianCalendar();
+				int minute, hour;
+				hour = date.get(Calendar.HOUR);
+				minute = date.get(Calendar.MINUTE);
 				FileWriter fStream;
 				try{				
 					fStream = new FileWriter("Present_Members.txt", true);
-					fStream.append(memberName.getText() + " Signed OUT!                      OUT   " + currentTime.getText());
+					fStream.append(memberName.getText() + " Signed OUT!                     OUT   " + hour + ":" + minute);
 					fStream.append(System.getProperty("line.separator"));
 					fStream.flush();
 					fStream.close();
