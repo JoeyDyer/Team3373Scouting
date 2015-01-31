@@ -1,4 +1,4 @@
-import java.awt.EventQueue;
+import java.awt.*;
 import java.util.*;
 
 import javax.swing.JFrame;
@@ -19,11 +19,14 @@ import java.io.PrintWriter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
+
+
 
 
 public class Sign_In_GUI {
@@ -110,28 +113,47 @@ public class Sign_In_GUI {
 			}
 		});
 		frame.getContentPane().add(btnSignOut);
+		btnSignIn.addActionListener(new Action());
+		btnSignOut.addActionListener(new Action.Actio());
 		
-		 class MyFrame extends JFrame implements ActionListener {
-			  public JButton btnSignIn = new JButton("Sign In");
-			  public JButton btnSignOut = new JButton("Sign Out");
+	}
+	static class Action implements ActionListener{
+		
+		public void actionPerformed(ActionEvent e){
+			JFrame wow = new JFrame("Hoi");
+			wow.setVisible(true);
+			wow.setSize(222,222);
+			JLabel label = new JLabel("YAY!");
+			JPanel panel = new JPanel();
+			wow.add(panel);
+			panel.add(label);
+			
+		}
+		
+		static class Actio implements ActionListener{
+			
+			public void actionPerformed(ActionEvent e){
+				JFrame wow = new JFrame("Boi");
+				wow.setVisible(true);
+				wow.setSize(222,222);
+				JLabel label = new JLabel("AWW!");
+				JPanel panel = new JPanel();
+				wow.add(panel);
+				panel.add(label);
+	}
+	
+	
+	
+	
+	
+		}
+}
 
-			  public MyFrame() {
-			    btnSignIn.addActionListener(this);
-			    btnSignOut.addActionListener(this);
-			  }
 
-			  public void actionPerformed(ActionEvent evt) {
-			    Object src = evt.getSource();
-			    if (src == btnSignIn) {
-			    	JOptionPane.showMessageDialog(null, "POMASUPA \n IS THA \n BESTEREST?!?!?!");
-			    } else if (src == btnSignOut) {
-			    	JOptionPane.showMessageDialog(null, "NOOOOOOO!");
 			    }
-			  }
-			}
+			  
+			
 
 		
 
 
-}
-}
