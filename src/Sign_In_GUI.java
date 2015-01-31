@@ -1,4 +1,8 @@
 import java.awt.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.io.*;
 import java.util.*;
 
 import javax.swing.JFrame;
@@ -87,16 +91,6 @@ public class Sign_In_GUI {
 		frame.getContentPane().add(txtPleaseEnterFirst);
 		txtPleaseEnterFirst.setColumns(10);
 		
-		JLabel lblTime = new JLabel("Time:");
-		lblTime.setBounds(56, 95, 35, 16);
-		frame.getContentPane().add(lblTime);
-		
-		txtPleaseEnterThe = new JTextField();
-		txtPleaseEnterThe.setBounds(213, 89, 346, 28);
-		txtPleaseEnterThe.setText("Please Enter the Current Time");
-		frame.getContentPane().add(txtPleaseEnterThe);
-		txtPleaseEnterThe.setColumns(10);
-		
 		JLabel lblSignInout = new JLabel("Sign In/Out?");
 		lblSignInout.setBounds(34, 152, 78, 16);
 		frame.getContentPane().add(lblSignInout);
@@ -109,6 +103,9 @@ public class Sign_In_GUI {
 		JButton btnSignIn = new JButton("Sign In");
 		btnSignIn.setBounds(30, 208, 87, 29);
 		frame.getContentPane().add(btnSignIn);		
+		
+		DateFormat txtPleaseEnterThe = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+		Date dateobj = new Date();
 		
 		JButton btnSignOut = new JButton("Sign Out");
 		btnSignOut.setBounds(213, 208, 98, 29);
@@ -133,20 +130,20 @@ public class Sign_In_GUI {
 		
 		
 		public void actionPerformed(ActionEvent e){
-			try{
-				String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-				FileWriter  File = new FileWriter("Present_Members.txt");
-				PrintWriter Printer = new PrintWriter(File);
-				Printer.println("Name:" + memberName.getText());
-				Printer.println("Time:" + currentTime.getText());
-				Printer.println("----------------------------------");
-				Printer.close();
+			FileWriter fStream;
+			try{				
+				fStream = new FileWriter("Present_Members.txt", true);
+				fStream.append(memberName.getText() + " Signed IN!                      IN   " + currentTime.getText());
+				fStream.append(System.getProperty("line.separator"));
+				fStream.flush();
+				fStream.close();
+			//	PrintWriter Printer = new PrintWriter("Present_Members.txt");
+				//Printer.println("Name:" + memberName.getText());
+				//Printer.println("Time:" + currentTime.getText());
+				//Printer.println("----------------------------------");
+				//Printer.close();
 				//Printer.println("Total Points:"+ total);
-				Printer.close();
-				int i = Integer.valueOf(index);
-				i += 1;
-				index = Integer.toString(i);
-				Files.write(Paths.get("index.txt"), index.getBytes());
+				//Printer.close();
 			} catch (IOException Action){
 				}
 			JOptionPane.showMessageDialog(null, "Signed In! Welcome!");
@@ -159,30 +156,28 @@ public class Sign_In_GUI {
 		public Actio(JTextField textfield1, JTextField textfield2) {
 				this.memberName = textfield1;
 				this.currentTime = textfield2;
-		
+
 	}
 			public void actionPerformed(ActionEvent e){
-				JFrame wow = new JFrame("Boi");
-				wow.setVisible(true);
-				wow.setSize(222,222);
-				JLabel label = new JLabel(currentTime.getText());
-				JPanel panel = new JPanel();
-				wow.add(panel);
-				panel.add(label);
+				FileWriter fStream;
+				try{				
+					fStream = new FileWriter("Present_Members.txt", true);
+					fStream.append(memberName.getText() + " Signed OUT!                      OUT   " + currentTime.getText());
+					fStream.append(System.getProperty("line.separator"));
+					fStream.flush();
+					fStream.close();
+				//	PrintWriter Printer = new PrintWriter("Present_Members.txt");
+					//Printer.println("Name:" + memberName.getText());
+					//Printer.println("Time:" + currentTime.getText());
+					//Printer.println("----------------------------------");
+					//Printer.close();
+					//Printer.println("Total Points:"+ total);
+					//Printer.close();
+				} catch (IOException Action){
+					}
+				JOptionPane.showMessageDialog(null, "Signed Out! Come Back Soon!");
+				
+			
 	}
-	
-	
-	
-	
-	
 		}
 }
-
-
-			    
-			  
-			
-
-		
-
-
