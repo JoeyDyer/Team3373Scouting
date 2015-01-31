@@ -137,7 +137,7 @@ public class Sign_In_GUI {
 			FileWriter fStream;
 			try{				
 				fStream = new FileWriter("Present_Members.txt", true);
-				fStream.append(memberName.getText() + " Signed IN!                      IN   " + hour + ":" + minute);
+				fStream.append("IN:  " + memberName.getText() + "      " + hour + ":" + minute);
 				fStream.append(System.getProperty("line.separator"));
 				fStream.flush();
 				fStream.close();
@@ -170,7 +170,7 @@ public class Sign_In_GUI {
 				FileWriter fStream;
 				try{				
 					fStream = new FileWriter("Present_Members.txt", true);
-					fStream.append(memberName.getText() + " Signed OUT!                     OUT   " + hour + ":" + minute);
+					fStream.append("OUT: " + memberName.getText() + "      " + hour + ":" + minute);
 					fStream.append(System.getProperty("line.separator"));
 					fStream.flush();
 					fStream.close();
