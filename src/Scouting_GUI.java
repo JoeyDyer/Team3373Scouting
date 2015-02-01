@@ -131,15 +131,7 @@ public class Scouting_GUI {
 		
 		
 		
-		
-		lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(null);
-		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
-		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel.gridx = 0;
-		gbc_lblNewLabel.gridy = 0;
-		frame.getContentPane().add(lblNewLabel, gbc_lblNewLabel);
-		
+	
 		lblTeamScoutingApplication = new JLabel("3373 Team Scouting Application");
 		GridBagConstraints gbc_lblTeamScoutingApplication_1 = new GridBagConstraints();
 		gbc_lblTeamScoutingApplication_1.insets = new Insets(0, 0, 5, 5);
@@ -490,7 +482,7 @@ public class Scouting_GUI {
 		txtEnterAdditionalNotes.setText("Enter Additional Notes Here");
 		GridBagConstraints gbc_txtEnterAdditionalNotes_1 = new GridBagConstraints();
 		gbc_txtEnterAdditionalNotes_1.gridheight = 2;
-		gbc_txtEnterAdditionalNotes_1.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtEnterAdditionalNotes_1.fill = GridBagConstraints.BOTH;
 		gbc_txtEnterAdditionalNotes_1.insets = new Insets(0, 0, 5, 5);
 		gbc_txtEnterAdditionalNotes_1.gridwidth = 3;
 		gbc_txtEnterAdditionalNotes_1.gridx = 0;
