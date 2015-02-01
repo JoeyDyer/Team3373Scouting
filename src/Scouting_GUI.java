@@ -534,9 +534,9 @@ public class Scouting_GUI {
 		button_1.addActionListener(new Minus1(1,2,3,4,5,6,7,8,txtEnterPointsScored, txtEnterPointsScored));
 		button_2.addActionListener(new Plus2(1,2,3,4,5,6,7,8, txtEnterPointsEarned, txtEnterPointsEarned));
 		button_3.addActionListener(new Minus2(1,2,3,4,5,6,7,8, txtEnterPointsEarned, txtEnterPointsEarned));
+		button_4.addActionListener(new Plus3(1,2,3,4,5,6,7,8,txtEnterMaximumHeight, txtEnterMaximumHeight));
+		button_5.addActionListener(new Minus3(1,2,3,4,5,6,7,8,txtEnterMaximumHeight, txtEnterMaximumHeight));
 		/*
-		button_4.addActionListener(new Plus3(1,2,3,4,5,6,7,8));
-		button_5.addActionListener(new Minus3(1,2,3,4,5,6,7,8));
 		button_6.addActionListener(new Plus4(1,2,3,4,5,6,7,8));
 		button_7.addActionListener(new Minus4(1,2,3,4,5,6,7,8));
 		button_8.addActionListener(new Plus5(1,2,3,4,5,6,7,8));
@@ -765,6 +765,80 @@ public class Scouting_GUI {
 
 	}
 			 }
+				class Plus3 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Plus3(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo+1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Minus3 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Minus3(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo-1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
 }
 	
 

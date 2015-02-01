@@ -1,8 +1,8 @@
 Team Number:Enter Target Team Number
 Match Number:Enter Match Number
 Teleop Tote Points Earned:0
-Maximum Tote Height:0
-Autonomous points scored:18
+Maximum Tote Height:-1
+Autonomous points scored:0
 Can stack points:0
 Maximum can stacking height:0
 Litter points:0
