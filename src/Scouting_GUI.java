@@ -6,10 +6,8 @@ import javax.swing.JFrame;
 import java.awt.BorderLayout;
 
 import javax.swing.JButton;
+
 import java.awt.*;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.RenderedImage;
@@ -19,14 +17,10 @@ import java.io.PrintWriter;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
 import javax.swing.*;
 
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JSplitPane;
-import javax.swing.JLabel;
 import java.security.*;
-
 import java.awt.Color;
 
 import javax.swing.ImageIcon;
@@ -532,27 +526,90 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		btnSubmit.addActionListener(handler);
-
-		
-		
-		gbc_button.addActionListener(new Action.Plus1(button));
-		gbc_button_1.addActionListener(new Action.Minus1(button_1));
-		gbc_button_2.addActionListener(new Action.Plus2(button_2));
-		gbc_button_3.addActionListener(new Action.Minus2(button_3));
-		gbc_button_4.addActionListener(new Action.Plus3(button_4));
-		gbc_button_5.addActionListener(new Action.Minus3(button_5));
-		gbc_button_6.addActionListener(new Action.Plus4(button_6));
-		gbc_button_7.addActionListener(new Action.Minus4(button_7));
-		gbc_button_8.addActionListener(new Action.Plus5(button_8));
-		gbc_button_9.addActionListener(new Action.Minus5(button_9));
-		gbc_button_10.addActionListener(new Action.Plus6(button_10));
-		gbc_button_11.addActionListener(new Action.Minus6(button_11));
-		gbc_button_12.addActionListener(new Action.Plus7(button_12));
-		gbc_button_13.addActionListener(new Action.Minus7(button_13));
-		gbc_button_14.addActionListener(new Action.Plus8(button_14));
-		gbc_button_15.addActionListener(new Action.Minus8(button_15));
 		
 
+	
+		
+		button.addActionListener(new Plus1(1,2,3,4,5,6,7,8, txtEnterPointsScored));
+		button_1.addActionListener(new Minus1(1,2,3,4,5,6,7,8,9, txtEnterPointsScored));
+		/*
+		button_2.addActionListener(new Plus2(1,2,3,4,5,6,7,8));
+		button_3.addActionListener(new Minus2(1,2,3,4,5,6,7,8));
+		button_4.addActionListener(new Plus3(1,2,3,4,5,6,7,8));
+		button_5.addActionListener(new Minus3(1,2,3,4,5,6,7,8));
+		button_6.addActionListener(new Plus4(1,2,3,4,5,6,7,8));
+		button_7.addActionListener(new Minus4(1,2,3,4,5,6,7,8));
+		button_8.addActionListener(new Plus5(1,2,3,4,5,6,7,8));
+		button_9.addActionListener(new Minus5(1,2,3,4,5,6,7,8));
+		button_10.addActionListener(new Plus6(1,2,3,4,5,6,7,8));
+		button_11.addActionListener(new Minus6(1,2,3,4,5,6,7,8));
+		button_12.addActionListener(new Plus7(1,2,3,4,5,6,7,8));
+		button_13.addActionListener(new Minus7(1,2,3,4,5,6,7,8));
+		button_14.addActionListener(new Plus8(1,2,3,4,5,6,7,8));
+		button_15.addActionListener(new Minus8(1,2,3,4,5,6,7,8));		
+*/
+	}
+	
+		class HandlerClass implements ActionListener{
+			private JTextField targetTeam;
+			private JTextField matchNumber;
+			private JTextField totePoints;
+			private JTextField toteHeight;
+			private JTextField autoPoints;
+			private JTextField canPoints;
+			private JTextField canHeight;
+			private JTextField literPoints;
+			private JTextField literHeight;
+			private JTextField coopPoints;
+			private JTextField addNotes;
+			private JTextField scoutName;
+		private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield7, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
+				this.targetTeam = textfield1;
+				this.matchNumber = textfield2;
+				this.totePoints = textfield3;
+				this.toteHeight = textfield4;
+				this.autoPoints = textfield5;
+				this.canPoints = textfield6;
+				this.canHeight = textfield7;
+				this.literPoints  = textfield8;
+				this.literHeight = textfield9;
+				this.coopPoints = textfield10;
+				this.addNotes = textfield11;
+				this.scoutName = textfield12;
+			}
+			public void actionPerformed(ActionEvent event){
+				try{
+					String index = Files.readAllLines(Paths.get("index.txt")).get(0);
+					FileWriter  File = new FileWriter(matchNumber.getText() + "(" + targetTeam.getText() + ").txt");
+					PrintWriter Printer = new PrintWriter(File);
+					Printer.println("Team Number:"+ targetTeam.getText());
+					Printer.println("Match Number:"+ matchNumber.getText());
+					Printer.println("Teleop Tote Points Earned:"+ totePoints.getText());
+					Printer.println("Maximum Tote Height:"+ toteHeight.getText());
+					Printer.println("Autonomous points scored:"+ autoPoints.getText());
+					Printer.println("Can stack points:"+ canPoints.getText());
+					Printer.println("Maximum can stacking height:"+ canHeight.getText());
+					Printer.println("Litter points:"+ literPoints.getText());
+					Printer.println("Maximum Litter Height:"+ literHeight.getText());
+					Printer.println("Points earned by coopertition:"+ coopPoints.getText());
+					Printer.println("Additional Notes:"+ addNotes.getText());
+					Printer.println("Name of Scout:"+ scoutName.getText());
+					Printer.println("____________________________________");
+					Printer.close();
+					//Printer.println("Total Points:"+ total);
+					Printer.close();
+					int i = Integer.valueOf(index);
+					i += 1;
+					index = Integer.toString(i);
+					Files.write(Paths.get("index.txt"), index.getBytes());
+				} catch (IOException e){
+					}
+				JOptionPane.showMessageDialog(null, "Scout Sheet Submitted. Thank you!");
+			}
+		}	
+	
+	
+		
 	class Plus1 implements ActionListener{
 		private int va;
 		private int vb;
@@ -562,8 +619,9 @@ public class Scouting_GUI {
 		private int vf;
 		private int vg;
 		private int vh;
-		public Plus1(int a, int b, int c, int d, int e, int f, int g, int h){
-			this.va = a;
+		
+		private Plus1(int a, int b, int c, int d, int e, int f, int g, int h, JTextField tf1){
+			a= this.va;
 			this.vb = b;
 			this.vc = c;
 			this.vd = d;
@@ -583,8 +641,9 @@ public class Scouting_GUI {
 		}
 		
 	}
-	class Minus1 implements ActionListener{
-		private int va;
+
+	static class Minus1 implements ActionListener{
+		public int va;
 		private int vb;
 		private int vc;
 		private int vd;
@@ -592,7 +651,9 @@ public class Scouting_GUI {
 		private int vf;
 		private int vg;
 		private int vh;
-		public void Plus1(int a, int b, int c, int d, int e, int f, int g, int h){
+		int num = 0;
+		private JTextField te;
+		private Minus1(int a, int b, int c, int d, int e, int f, int g, int h, int num2, JTextField text){
 			this.va = a;
 			this.vb = b;
 			this.vc = c;
@@ -601,73 +662,25 @@ public class Scouting_GUI {
 			this.vf = f;
 			this.vg = g;
 			this.vh = h;
+			this.num = num2;
+			this.te = text;
 
 		
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			va = va - 1;
+			
+			num = num - 1;
+			//JOptionPane.showMessageDialog(null, num);
+			te.setText(((Integer) num).toString());
+
+			
 			
 		}
+
 		
 	}
-
-	class HandlerClass implements ActionListener{
-		private JTextField targetTeam;
-		private JTextField matchNumber;
-		private JTextField totePoints;
-		private JTextField toteHeight;
-		private JTextField autoPoints;
-		private JTextField canPoints;
-		private JTextField canHeight;
-		private JTextField literPoints;
-		private JTextField literHeight;
-		private JTextField coopPoints;
-		private JTextField addNotes;
-		private JTextField scoutName;
-	private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield7, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
-			this.targetTeam = textfield1;
-			this.matchNumber = textfield2;
-			this.totePoints = textfield3;
-			this.toteHeight = textfield4;
-			this.autoPoints = textfield5;
-			this.canPoints = textfield6;
-			this.canHeight = textfield7;
-			this.literPoints  = textfield8;
-			this.literHeight = textfield9;
-			this.coopPoints = textfield10;
-			this.addNotes = textfield11;
-			this.scoutName = textfield12;
-		}
-		public void actionPerformed(ActionEvent event){
-			try{
-				String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-				FileWriter  File = new FileWriter(matchNumber.getText() + "(" + targetTeam.getText() + ").txt");
-				PrintWriter Printer = new PrintWriter(File);
-				Printer.println("Team Number:"+ targetTeam.getText());
-				Printer.println("Match Number:"+ matchNumber.getText());
-				Printer.println("Teleop Tote Points Earned:"+ totePoints.getText());
-				Printer.println("Maximum Tote Height:"+ toteHeight.getText());
-				Printer.println("Autonomous points scored:"+ autoPoints.getText());
-				Printer.println("Can stack points:"+ canPoints.getText());
-				Printer.println("Maximum can stacking height:"+ canHeight.getText());
-				Printer.println("Litter points:"+ literPoints.getText());
-				Printer.println("Maximum Litter Height:"+ literHeight.getText());
-				Printer.println("Points earned by coopertition:"+ coopPoints.getText());
-				Printer.println("Additional Notes:"+ addNotes.getText());
-				Printer.println("Name of Scout:"+ scoutName.getText());
-				Printer.println("____________________________________");
-				Printer.close();
-				//Printer.println("Total Points:"+ total);
-				Printer.close();
-				int i = Integer.valueOf(index);
-				i += 1;
-				index = Integer.toString(i);
-				Files.write(Paths.get("index.txt"), index.getBytes());
-			} catch (IOException e){
-				}
-			JOptionPane.showMessageDialog(null, "Scout Sheet Submitted. Thank you!");
-		}
-	}
-	}
 }
+
+
+

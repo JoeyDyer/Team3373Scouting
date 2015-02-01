@@ -53,6 +53,7 @@ public class Practice_GUI {
 		JButton btnButton = new JButton("Button");
 		btnButton.setBounds(0, 0, 450, 278);
 		frame.getContentPane().add(btnButton);
+		JLabel label2 = new JLabel();
 		
 		HandlerClass handler = new HandlerClass();
 			btnButton.addActionListener(handler);
