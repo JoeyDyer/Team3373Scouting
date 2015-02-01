@@ -533,7 +533,173 @@ public class Scouting_GUI {
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		btnSubmit.addActionListener(handler);
 		
+		gbc_button.addActionListener(new Action.Plus1(button));
+		gbc_button_1.addActionListener(new Action.Minus1(button_1));
+		gbc_button_2.addActionListener(new Action.Plus2(button_2));
+		gbc_button_3.addActionListener(new Action.Minus2(button_3));
+		gbc_button_4.addActionListener(new Action.Plus3(button_4));
+		gbc_button_5.addActionListener(new Action.Minus3(button_5));
+		gbc_button_6.addActionListener(new Action.Plus4(button_6));
+		gbc_button_7.addActionListener(new Action.Minus4(button_7));
+		gbc_button_8.addActionListener(new Action.Plus5(button_8));
+		gbc_button_9.addActionListener(new Action.Minus5(button_9));
+		gbc_button_10.addActionListener(new Action.Plus6(button_10));
+		gbc_button_11.addActionListener(new Action.Minus6(button_11));
+		gbc_button_12.addActionListener(new Action.Plus7(button_12));
+		gbc_button_13.addActionListener(new Action.Minus7(button_13));
+		gbc_button_14.addActionListener(new Action.Plus8(button_14));
+		gbc_button_15.addActionListener(new Action.Minus8(button_15));
+		
+		
+		
 	}
+	
+	
+	static class Plus1 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			vara = vara + 1
+			
+		}
+		
+	}
+	static class Minus1 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus2 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus3 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus3 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus4 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus4 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus5 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus5 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus6 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus6 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus7 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus7 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Plus8 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	static class Minus8 implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+		
+	}
+	
 	
 	private class HandlerClass implements ActionListener{
 		private JTextField targetTeam;
