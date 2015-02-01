@@ -602,6 +602,7 @@ public class Scouting_GUI {
 					i += 1;
 					index = Integer.toString(i);
 					Files.write(Paths.get("index.txt"), index.getBytes());
+					int num = 0;
 				} catch (IOException e){
 					}
 				JOptionPane.showMessageDialog(null, "Scout Sheet Submitted. Thank you!");
@@ -651,9 +652,9 @@ public class Scouting_GUI {
 		private int vf;
 		private int vg;
 		private int vh;
-		int num = 0;
+		private int num2;
 		private JTextField te;
-		private Minus1(int a, int b, int c, int d, int e, int f, int g, int h, int num2, JTextField text){
+		private Minus1(int a, int b, int c, int d, int e, int f, int g, int h, int num, JTextField text){
 			this.va = a;
 			this.vb = b;
 			this.vc = c;
@@ -662,7 +663,7 @@ public class Scouting_GUI {
 			this.vf = f;
 			this.vg = g;
 			this.vh = h;
-			this.num = num2;
+			this.num2 = num;
 			this.te = text;
 
 		
@@ -670,9 +671,9 @@ public class Scouting_GUI {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-			num = num - 1;
+			num2 = num2 - 1;
 			//JOptionPane.showMessageDialog(null, num);
-			te.setText(((Integer) num).toString());
+			te.setText(((Integer) num2).toString());
 
 			
 			
