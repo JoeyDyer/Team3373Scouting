@@ -536,18 +536,16 @@ public class Scouting_GUI {
 		button_3.addActionListener(new Minus2(1,2,3,4,5,6,7,8, txtEnterPointsEarned, txtEnterPointsEarned));
 		button_4.addActionListener(new Plus3(1,2,3,4,5,6,7,8,txtEnterMaximumHeight, txtEnterMaximumHeight));
 		button_5.addActionListener(new Minus3(1,2,3,4,5,6,7,8,txtEnterMaximumHeight, txtEnterMaximumHeight));
-		/*
-		button_6.addActionListener(new Plus4(1,2,3,4,5,6,7,8));
-		button_7.addActionListener(new Minus4(1,2,3,4,5,6,7,8));
-		button_8.addActionListener(new Plus5(1,2,3,4,5,6,7,8));
-		button_9.addActionListener(new Minus5(1,2,3,4,5,6,7,8));
-		button_10.addActionListener(new Plus6(1,2,3,4,5,6,7,8));
-		button_11.addActionListener(new Minus6(1,2,3,4,5,6,7,8));
-		button_12.addActionListener(new Plus7(1,2,3,4,5,6,7,8));
-		button_13.addActionListener(new Minus7(1,2,3,4,5,6,7,8));
-		button_14.addActionListener(new Plus8(1,2,3,4,5,6,7,8));
-		button_15.addActionListener(new Minus8(1,2,3,4,5,6,7,8));		
-*/
+		button_6.addActionListener(new Plus4(1,2,3,4,5,6,7,8,txtEnterPointsEarned_1, txtEnterPointsEarned_1));
+		button_7.addActionListener(new Minus4(1,2,3,4,5,6,7,8,txtEnterPointsEarned_1, txtEnterPointsEarned_1));
+		button_8.addActionListener(new Plus5(1,2,3,4,5,6,7,8,txtEnterMaximumHeight_1, txtEnterMaximumHeight_1));
+		button_9.addActionListener(new Minus5(1,2,3,4,5,6,7,8,txtEnterMaximumHeight_1, txtEnterMaximumHeight_1));
+		button_10.addActionListener(new Plus6(1,2,3,4,5,6,7,8,txtEnterPointsEarned_2, txtEnterPointsEarned_2));
+		button_11.addActionListener(new Minus6(1,2,3,4,5,6,7,8,txtEnterPointsEarned_2, txtEnterPointsEarned_2));
+		button_12.addActionListener(new Plus7(1,2,3,4,5,6,7,8,txtEnterNumberOf, txtEnterNumberOf));
+		button_13.addActionListener(new Minus7(1,2,3,4,5,6,7,8,txtEnterNumberOf,txtEnterNumberOf));
+		button_14.addActionListener(new Plus8(1,2,3,4,5,6,7,8,txtEnterPointsEarned_3,txtEnterPointsEarned_3));
+		button_15.addActionListener(new Minus8(1,2,3,4,5,6,7,8,txtEnterPointsEarned_3,txtEnterPointsEarned_3));		
 	}
 	
 		class HandlerClass implements ActionListener{
@@ -834,6 +832,373 @@ public class Scouting_GUI {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
 						foo = foo-1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Plus4 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Plus4(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo+1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Minus4 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Minus4(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo-1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Plus5 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Plus5(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo+1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Minus5 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Minus5(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo-1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Plus6 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Plus6(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo+1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Minus6 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Minus6(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo-1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Plus7 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Plus7(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo+1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Minus7 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Minus7(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo-1;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Plus8 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Plus8(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo+20;
+						//int bob2 = ((Integer) bob);
+						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						te.setText(((Integer)foo).toString());
+					}
+				}
+				class Minus8 implements ActionListener{
+					private int va;
+					private int vb;
+					private int vc;
+					private int vd;
+					private int ve;
+					private int vf;
+					private int vg;
+					private int vh;
+					private JTextField num2;
+					private JTextField te;
+					private Minus8(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+						a= this.va;
+						this.vb = b;
+						this.vc = c;
+						this.vd = d;
+						this.ve = e;
+						this.vf = f;
+						this.vg = g;
+						this.vh = h;
+						this.num2 = num;
+						this.te = tf1;
+
+
+
+						
+					}
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						String bob = (num2.getText()).toString();
+						int foo = Integer.parseInt(bob);
+						foo = foo-20;
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 						te.setText(((Integer)foo).toString());
