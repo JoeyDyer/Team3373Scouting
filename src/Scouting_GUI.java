@@ -532,6 +532,8 @@ public class Scouting_GUI {
 		gbc_btnSubmit.gridy = 14;
 		frame.getContentPane().add(btnSubmit, gbc_btnSubmit);
 		btnSubmit.addActionListener(handler);
+
+		
 		
 		gbc_button.addActionListener(new Action.Plus1(button));
 		gbc_button_1.addActionListener(new Action.Minus1(button_1));
@@ -550,158 +552,67 @@ public class Scouting_GUI {
 		gbc_button_14.addActionListener(new Action.Plus8(button_14));
 		gbc_button_15.addActionListener(new Action.Minus8(button_15));
 		
-		
-		
-	}
-	
-	
-	static class Plus1 implements ActionListener{
 
+	class Plus1 implements ActionListener{
+		private int va;
+		private int vb;
+		private int vc;
+		private int vd;
+		private int ve;
+		private int vf;
+		private int vg;
+		private int vh;
+		public Plus1(int a, int b, int c, int d, int e, int f, int g, int h){
+			this.va = a;
+			this.vb = b;
+			this.vc = c;
+			this.vd = d;
+			this.ve = e;
+			this.vf = f;
+			this.vg = g;
+			this.vh = h;
+
+
+
+			
+		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			vara = vara + 1
+			va = va + 1;
 			
 		}
 		
 	}
-	static class Minus1 implements ActionListener{
+	class Minus1 implements ActionListener{
+		private int va;
+		private int vb;
+		private int vc;
+		private int vd;
+		private int ve;
+		private int vf;
+		private int vg;
+		private int vh;
+		public void Plus1(int a, int b, int c, int d, int e, int f, int g, int h){
+			this.va = a;
+			this.vb = b;
+			this.vc = c;
+			this.vd = d;
+			this.ve = e;
+			this.vf = f;
+			this.vg = g;
+			this.vh = h;
 
+		
+		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
+			va = va - 1;
 			
 		}
 		
 	}
-	static class Plus2 implements ActionListener{
 
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus2 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Plus3 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus3 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Plus4 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus4 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Plus5 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus5 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Plus6 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus6 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Plus7 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus7 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Plus8 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	static class Minus8 implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
-	}
-	
-	
-	private class HandlerClass implements ActionListener{
+	class HandlerClass implements ActionListener{
 		private JTextField targetTeam;
 		private JTextField matchNumber;
 		private JTextField totePoints;
@@ -757,5 +668,6 @@ public class Scouting_GUI {
 				}
 			JOptionPane.showMessageDialog(null, "Scout Sheet Submitted. Thank you!");
 		}
+	}
 	}
 }
