@@ -530,7 +530,7 @@ public class Scouting_GUI {
 
 	
 		
-		button.addActionListener(new Plus1(1,2,3,4,5,6,7,8, txtEnterPointsScored));
+		button.addActionListener(new Plus1(1,2,3,4,5,6,7,8,9, txtEnterPointsScored));
 		button_1.addActionListener(new Minus1(1,2,3,4,5,6,7,8,9, txtEnterPointsScored));
 		/*
 		button_2.addActionListener(new Plus2(1,2,3,4,5,6,7,8));
@@ -620,8 +620,9 @@ public class Scouting_GUI {
 		private int vf;
 		private int vg;
 		private int vh;
-		
-		private Plus1(int a, int b, int c, int d, int e, int f, int g, int h, JTextField tf1){
+		public int num2;
+		private JTextField te;
+		private Plus1(int a, int b, int c, int d, int e, int f, int g, int h, int num, JTextField tf1){
 			a= this.va;
 			this.vb = b;
 			this.vc = c;
@@ -630,6 +631,8 @@ public class Scouting_GUI {
 			this.vf = f;
 			this.vg = g;
 			this.vh = h;
+			this.num2 = num;
+			this.te = tf1;
 
 
 
@@ -637,7 +640,8 @@ public class Scouting_GUI {
 		}
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			va = va + 1;
+			num2 = num2 + 1;
+			te.setText(((Integer) num2).toString());
 			
 		}
 		
@@ -652,7 +656,7 @@ public class Scouting_GUI {
 		private int vf;
 		private int vg;
 		private int vh;
-		private int num2;
+		public int num2;
 		private JTextField te;
 		private Minus1(int a, int b, int c, int d, int e, int f, int g, int h, int num, JTextField text){
 			this.va = a;
