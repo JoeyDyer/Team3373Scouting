@@ -694,6 +694,9 @@ public class Scouting_GUI {
 			String bob = (num2.getText()).toString();
 			int foo = Integer.parseInt(bob);
 			foo = foo-1;
+			if(foo < 0){
+			}
+			else
 			//int bob2 = ((Integer) bob);
 		//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 			te.setText(((Integer)foo).toString());
@@ -771,6 +774,9 @@ public class Scouting_GUI {
 					String bob = (num2.getText()).toString();
 					int foo = Integer.parseInt(bob);
 					foo = foo-1;
+					if(foo < 0){
+					}
+					else
 					//int bob2 = ((Integer) bob);
 				//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 					te.setText(((Integer)foo).toString());
@@ -846,6 +852,9 @@ public class Scouting_GUI {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
 						foo = foo-1;
+						if(foo < 0){
+						}
+						else
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 						te.setText(((Integer)foo).toString());
@@ -917,6 +926,9 @@ public class Scouting_GUI {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
 						foo = foo-1;
+						if(foo < 0){
+						}
+						else
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 						te.setText(((Integer)foo).toString());
@@ -991,6 +1003,9 @@ public class Scouting_GUI {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
 						foo = foo-1;
+						if(foo < 0){
+						}
+						else
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 						te.setText(((Integer)foo).toString());
@@ -1067,6 +1082,9 @@ public class Scouting_GUI {
 						foo = foo-1;
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+						if(foo < 0){
+						}
+						else
 						te.setText(((Integer)foo).toString());
 					}
 				}
@@ -1139,6 +1157,9 @@ public class Scouting_GUI {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
 						foo = foo-1;
+						if(foo < 0){
+						}
+						else
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 						te.setText(((Integer)foo).toString());
@@ -1215,6 +1236,9 @@ public class Scouting_GUI {
 						foo = foo-20;
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+					if(foo < 0){
+					}
+					else
 						te.setText(((Integer)foo).toString());
 					}
 				}
