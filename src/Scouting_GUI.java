@@ -532,9 +532,9 @@ public class Scouting_GUI {
 		
 		button.addActionListener(new Plus1(1,2,3,4,5,6,7,8,txtEnterPointsScored, txtEnterPointsScored));
 		button_1.addActionListener(new Minus1(1,2,3,4,5,6,7,8,txtEnterPointsScored, txtEnterPointsScored));
+		button_2.addActionListener(new Plus2(1,2,3,4,5,6,7,8, txtEnterPointsEarned, txtEnterPointsEarned));
+		button_3.addActionListener(new Minus2(1,2,3,4,5,6,7,8, txtEnterPointsEarned, txtEnterPointsEarned));
 		/*
-		button_2.addActionListener(new Plus2(1,2,3,4,5,6,7,8));
-		button_3.addActionListener(new Minus2(1,2,3,4,5,6,7,8));
 		button_4.addActionListener(new Plus3(1,2,3,4,5,6,7,8));
 		button_5.addActionListener(new Minus3(1,2,3,4,5,6,7,8));
 		button_6.addActionListener(new Plus4(1,2,3,4,5,6,7,8));
@@ -644,7 +644,7 @@ public class Scouting_GUI {
 			int foo = Integer.parseInt(bob);
 			foo = foo+1;
 			//int bob2 = ((Integer) bob);
-			String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+			//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 			te.setText(((Integer)foo).toString());
 			
 		}
@@ -683,16 +683,88 @@ public class Scouting_GUI {
 			int foo = Integer.parseInt(bob);
 			foo = foo-1;
 			//int bob2 = ((Integer) bob);
-			String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+		//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 			te.setText(((Integer)foo).toString());
+			
+		}
+	}
+			
+			 class Plus2 implements ActionListener{
+				private int va;
+				private int vb;
+				private int vc;
+				private int vd;
+				private int ve;
+				private int vf;
+				private int vg;
+				private int vh;
+				private JTextField num2;
+				private JTextField te;
+				private Plus2(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+					a= this.va;
+					this.vb = b;
+					this.vc = c;
+					this.vd = d;
+					this.ve = e;
+					this.vf = f;
+					this.vg = g;
+					this.vh = h;
+					this.num2 = num;
+					this.te = tf1;
+
+				
+				}
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					
+					String bob = (num2.getText()).toString();
+					int foo = Integer.parseInt(bob);
+					foo = foo+1;
+					//int bob2 = ((Integer) bob);
+				//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+					te.setText(((Integer)foo).toString());
 
 			
 			
 		}
-
-		
 	}
+			 class Minus2 implements ActionListener{
+				private int va;
+				private int vb;
+				private int vc;
+				private int vd;
+				private int ve;
+				private int vf;
+				private int vg;
+				private int vh;
+				private JTextField num2;
+				private JTextField te;
+				private Minus2(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+					a= this.va;
+					this.vb = b;
+					this.vc = c;
+					this.vd = d;
+					this.ve = e;
+					this.vf = f;
+					this.vg = g;
+					this.vh = h;
+					this.num2 = num;
+					this.te = tf1;
+
+				
+				}
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					
+					String bob = (num2.getText()).toString();
+					int foo = Integer.parseInt(bob);
+					foo = foo-1;
+					//int bob2 = ((Integer) bob);
+				//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+					te.setText(((Integer)foo).toString());
+
+	}
+			 }
 }
-
-
+	
 
