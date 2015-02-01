@@ -489,6 +489,7 @@ public class Scouting_GUI {
 		txtEnterAdditionalNotes.setBackground(Color.WHITE);
 		txtEnterAdditionalNotes.setText("Enter Additional Notes Here");
 		GridBagConstraints gbc_txtEnterAdditionalNotes_1 = new GridBagConstraints();
+		gbc_txtEnterAdditionalNotes_1.gridheight = 2;
 		gbc_txtEnterAdditionalNotes_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtEnterAdditionalNotes_1.insets = new Insets(0, 0, 5, 5);
 		gbc_txtEnterAdditionalNotes_1.gridwidth = 3;
@@ -600,6 +601,19 @@ public class Scouting_GUI {
 					i += 1;
 					index = Integer.toString(i);
 					Files.write(Paths.get("index.txt"), index.getBytes());
+					targetTeam.setText("");
+					matchNumber.setText("");
+					totePoints.setText("0");
+					toteHeight.setText("0");
+					autoPoints.setText("0");
+					canPoints.setText("0");
+					canHeight.setText("0");
+					literPoints.setText("0");
+					literHeight.setText("0");
+					coopPoints.setText("0");
+					addNotes.setText("");
+					scoutName.setText("");
+					
 					//int num = 0;
 				} catch (IOException e){
 					}
