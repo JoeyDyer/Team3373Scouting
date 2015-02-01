@@ -1,0 +1,13 @@
+Team Number:Enter Target Team Number
+Match Number:Enter Match Number
+Teleop Tote Points Earned:0
+Maximum Tote Height:-1
+Autonomous points scored:0
+Can stack points:0
+Maximum can stacking height:0
+Litter points:0
+Maximum Litter Height:0
+Points earned by coopertition:0
+Additional Notes:Enter Additional Notes Here
+Name of Scout:Enter Your Name Here
+____________________________________
