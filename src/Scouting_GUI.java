@@ -1,4 +1,4 @@
-import java.awt.EventQueue;
+ import java.awt.EventQueue;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -481,8 +481,9 @@ public class Scouting_GUI {
 		txtEnterAdditionalNotes.setBackground(Color.WHITE);
 		txtEnterAdditionalNotes.setText("Enter Additional Notes Here");
 		GridBagConstraints gbc_txtEnterAdditionalNotes_1 = new GridBagConstraints();
+		gbc_txtEnterAdditionalNotes_1.anchor = GridBagConstraints.NORTH;
 		gbc_txtEnterAdditionalNotes_1.gridheight = 2;
-		gbc_txtEnterAdditionalNotes_1.fill = GridBagConstraints.BOTH;
+		gbc_txtEnterAdditionalNotes_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtEnterAdditionalNotes_1.insets = new Insets(0, 0, 5, 5);
 		gbc_txtEnterAdditionalNotes_1.gridwidth = 3;
 		gbc_txtEnterAdditionalNotes_1.gridx = 0;

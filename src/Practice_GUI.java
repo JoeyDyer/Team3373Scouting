@@ -60,9 +60,9 @@ public class Practice_GUI {
 	}
 	private class HandlerClass implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			
-			JOptionPane.showMessageDialog(null, x);
 			x = x + 1;
+			JOptionPane.showMessageDialog(null, x);
+		
 		}
 	}
 
