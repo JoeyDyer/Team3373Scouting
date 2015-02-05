@@ -1,3 +1,9 @@
+import java.io.FileReader;
+import java.io.*;
+import java.util.*;
+import javax.swing.*;
+
+
 
 public class Scouting_Compiler {
 
@@ -6,7 +12,7 @@ public class Scouting_Compiler {
 		// We need a way to know the length of the team #
 		//We need to read the team number and find matching numbers
 		//We need to read those files and pull variables from the text (Using a method similar to what we used to read the JTextFields should work)
-		
+		//FileReader reader = new FileReader();
 	
 	}
 
