@@ -13,6 +13,7 @@ public class Scouting_Compiler {
 		//We need to read the team number and find matching numbers
 		//We need to read those files and pull variables from the text (Using a method similar to what we used to read the JTextFields should work)
 		//FileReader reader = new FileReader();
+		//http://www.homeandlearn.co.uk/java/read_a_textfile_in_java.html
 	
 	}
 
