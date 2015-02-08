@@ -1,4 +1,4 @@
-package textfiles;
+package textfiles; 
 import java.io.*;
 
 public class ReadFile {
