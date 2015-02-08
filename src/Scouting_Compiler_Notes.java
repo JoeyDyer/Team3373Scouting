@@ -5,7 +5,7 @@ import javax.swing.*;
 
 
 
-public class Scouting_Compiler {
+public class Scouting_Compiler_Notes {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

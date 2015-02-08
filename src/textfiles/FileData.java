@@ -9,7 +9,7 @@ public class FileData {
 	public static void main(String[] args) throws IOException {
 		String file_name = "Test.txt";
 		
-		
+		//Each set of info is 14 lines ( last 2 empty)
 		
 		try{
 			ReadFile file = new ReadFile(file_name);
