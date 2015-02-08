@@ -21,7 +21,7 @@ public class FileData {
 				String[] aryLines = file.OpenFile();
 				int i;
 				for(i=0; i < aryLines.length; i++ ){
-					String bob = aryLines[i];
+					String bob = aryLines[0];
 					String a = bob.replaceAll("[^0-9]", "");
 					int foo = Integer.parseInt(a);
 					System.out.println(foo);
