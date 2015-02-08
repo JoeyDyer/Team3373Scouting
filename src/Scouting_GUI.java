@@ -572,8 +572,8 @@ public class Scouting_GUI {
 			public void actionPerformed(ActionEvent event){
 				try{
 					String index = Files.readAllLines(Paths.get("index.txt")).get(0);
-					FileWriter  File = new FileWriter(targetTeam.getText()+"("+matchNumber.getText()+").txt");
-					PrintWriter Printer = new PrintWriter(File);
+					//FileWriter  File = new FileWriter(targetTeam.getText()+"("+matchNumber.getText()+").txt");
+					PrintWriter Printer = new PrintWriter(targetTeam.getText()+".txt");
 					Printer.println("Team Number:"+ targetTeam.getText());
 					Printer.println("Match Number:"+ matchNumber.getText());
 					Printer.println("Teleop Tote Points Earned:"+ totePoints.getText());
