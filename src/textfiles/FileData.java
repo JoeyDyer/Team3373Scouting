@@ -21,7 +21,7 @@ public class FileData {
 				String[] aryLines = file.OpenFile();
 				int i;
 				for(i=0; i < aryLines.length; i++ ){
-					String bob = aryLines[0];
+					String bob = aryLines[i];
 					String a = bob.replaceAll("[^0-9]", "");
 					int foo = Integer.parseInt(a);
 					System.out.println(foo);
@@ -42,6 +42,7 @@ public class FileData {
 					int foo3 = Integer.parseInt(c);
 					System.out.println(foo3);*/
 					//System.out.println(foo3);
+					/*
 					String bob4 = aryLines[3];
 					String d = bob4.replaceAll("[^0-9]", "");
 					int foo4 = Integer.parseInt(d);
@@ -51,6 +52,8 @@ public class FileData {
 					int foo5 = Integer.parseInt(d);
 					//System.out.println(foo5);
 					//JOptionPane.showMessageDialog(null, foo + foo2 + foo3 + foo4 + foo5);
+					 * 
+					 */
 				
 				}
 			}

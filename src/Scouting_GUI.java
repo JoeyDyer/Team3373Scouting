@@ -573,7 +573,7 @@ public class Scouting_GUI {
 				try{
 					String index = Files.readAllLines(Paths.get("index.txt")).get(0);
 					//FileWriter  File = new FileWriter(targetTeam.getText()+"("+matchNumber.getText()+").txt");
-
+/*
 					PrintWriter Printer = new PrintWriter(targetTeam.getText()+".txt");
 					Printer.println("Team Number:"+ targetTeam.getText());
 					Printer.println("Match Number:"+ matchNumber.getText());
@@ -589,6 +589,7 @@ public class Scouting_GUI {
 					Printer.println("Name of Scout:"+ scoutName.getText());
 					Printer.println("____________________________________");
 					Printer.close();
+					*/
 					//PrintWriter Printer = new PrintWriter(File);
 					FileWriter fStream = new FileWriter(targetTeam.getText() + ".txt", true);
 					fStream.append("Team Number:"+ targetTeam.getText());
@@ -611,12 +612,11 @@ public class Scouting_GUI {
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append("Points earned by coopertition:"+ coopPoints.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Additional Notes:"+ addNotes.getText());
+					fStream.append("Additional Notes:"+ addNotes.getText()+"0");
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Name of Scout:"+ scoutName.getText());
+					fStream.append("Name of Scout:"+ scoutName.getText()+"0");
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("____________________________________");
-					fStream.append(System.getProperty("line.separator"));
+					fStream.append("0____________________________________0");
 					fStream.append(System.getProperty("line.separator"));
 					fStream.flush();
 					fStream.close();
