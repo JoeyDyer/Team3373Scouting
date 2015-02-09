@@ -24,10 +24,26 @@ public class FileData {
 					String bob = aryLines[i];
 					String a = bob.replaceAll("[^0-9]", "");
 					int foo = Integer.parseInt(a);
-					System.out.println(foo);
+					//System.out.println(foo);
 					String test = aryLines[i].replaceAll("[0-9]", "");
-					
-				//	System.out.println(test);
+					/*
+					Scanner Scan2 = new Scanner(System.in);
+					String line = Scan2.nextLine();
+					String[] numberStrs = line.split(",");
+					int[] numbers = new int[numberStrs.length];
+					//for(int b = 0;b < numberStrs.length;b++)
+					{
+					   // Note that this is assuming valid input
+					   // If you want to check then add a try/catch 
+					   // and another index for the numbers if to continue adding the others
+					  // numbers[b] = Integer.parseInt(numberStrs[b]);
+					}
+					System.out.println(numbers[i]);
+					*/
+					//System.out.println(aryLines[i]);
+/**	System.out.println(test);
+ * 
+ */
 					//String bob2 = aryLines[1];
 					//String aryParsed[] = a;
 					//String bob2 = a[1];
