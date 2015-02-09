@@ -14,7 +14,7 @@ public class FileData {
 			String Com = Scan.next();
 			String file_name = Com+ ".txt";
 			
-			//Each set of info is 14 lines ( last 2 empty)
+			//Each set of info is 14 lines (1-12 used)
 			
 			try{
 				ReadFile file = new ReadFile(file_name);
@@ -25,13 +25,17 @@ public class FileData {
 					String a = bob.replaceAll("[^0-9]", "");
 					int foo = Integer.parseInt(a);
 					System.out.println(foo);
-					/*String bob2 = aryLines[1];				
-					String bob = aryLines[i];
+					String test = aryLines[i].replaceAll("[0-9]", "");
+					
+				//	System.out.println(test);
+					//String bob2 = aryLines[1];
+					//String aryParsed[] = a;
+					//String bob2 = a[1];
 					//String a = bob.replaceAll("[^0-9]", "");
 					//int foo = Integer.parseInt(a);
 					//System.out.println(foo);
-					int gogogo = i-1;
-					System.out.println(i);
+					//int gogogo = i-1;
+					//System.out.println(i);
 					/*
 					String bob2 = aryLines[1];
 					String b = bob2.replaceAll("[^0-9]", "");
