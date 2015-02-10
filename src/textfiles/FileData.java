@@ -24,7 +24,7 @@ public class FileData {
 					String bob = aryLines[i];
 					String a = bob.replaceAll("[^0-9]", "");
 					int foo = Integer.parseInt(a);
-					//System.out.println(foo);
+					System.out.println(foo);
 					String test = aryLines[i].replaceAll("[0-9]", "");
 					/*
 					Scanner Scan2 = new Scanner(System.in);
