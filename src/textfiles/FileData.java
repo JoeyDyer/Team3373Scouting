@@ -332,7 +332,7 @@ public class FileData {
 					String jc = bob87.replaceAll("[^0-9]", "");
 					double foo87 = Integer.parseInt(jc);
 					String bob88 = aryLines[87];
-					String kc = bob86.replaceAll("[^0-9]", "");
+					String kc = bob88.replaceAll("[^0-9]", "");
 					double foo88 = Integer.parseInt(kc);
 					/*String bob89 = aryLines[88];
 					String lc = bob89.replaceAll("[^0-9]", "");
@@ -418,7 +418,7 @@ public class FileData {
 					System.out.println(litPoint);
 					double litHeight = foo9/8 + foo22/8 + foo35/8 + foo48/8 + foo61/8 + foo74/8 + foo87/8 + foo100/8;
 					System.out.println(litHeight);
-					double coopPoint = foo10/8 + foo23/8 +foo36/8 + foo49/8 + foo62/8 + foo75/8 + foo88/8 + foo101/8;
+					double coopPoint = foo10/8 + foo23/8 + foo36/8 + foo49/8 + foo62/8 + foo75/8 + foo88/8 + foo101/8;
 					System.out.println(coopPoint);
 				}
 			
