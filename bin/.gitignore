@@ -1,5 +1,15 @@
+/textfiles/
 /Action$Actio.class
 /Action.class
+/Sign_In_GUI$1.class
+/Sign_In_GUI$2.class
+/Sign_In_GUI.class
+/TestingWindowBuilder$1.class
+/TestingWindowBuilder.class
+/Text_Import.class
+/swing2$Action$Actio.class
+/swing2$Action.class
+/swing2.class
 /GuiTesting.class
 /HelloTest.class
 /Index.class
@@ -29,6 +39,7 @@
 /Scouting_GUI$Plus7.class
 /Scouting_GUI$Plus8.class
 /Scouting_GUI.class
+<<<<<<< HEAD
 /Sign_In_GUI$1.class
 /Sign_In_GUI$2.class
 /Sign_In_GUI.class
@@ -39,3 +50,5 @@
 /swing2$Action.class
 /swing2.class
 /textfiles/
+=======
+>>>>>>> branch 'master' of https://github.com/JoeyDyer/Team3373Scouting.git
