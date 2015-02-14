@@ -327,7 +327,7 @@ public class FileData {
 					double foo85 = Integer.parseInt(hc);
 					String bob86 = aryLines[85];
 					String ic = bob86.replaceAll("[^0-9]", "");
-					double fo86 = Integer.parseInt(ic);
+					double foo86 = Integer.parseInt(ic);
 					String bob87 = aryLines[86];
 					String jc = bob87.replaceAll("[^0-9]", "");
 					double foo87 = Integer.parseInt(jc);
@@ -399,6 +399,27 @@ public class FileData {
 					 
 				//double averageTest = foo3/2 + foo2/2;
 				//System.out.println(averageTest);
+					
+				/**	3, 16, 29, 42, 55, 68, 81, 94
+				 * 
+				 */
+					
+					double teleTote = foo3/8 + foo16/8 + foo29/8 + foo42/8 + foo55/8 + foo68/8 + foo81/8 + foo94/8;
+					System.out.println(teleTote);
+					double toteHeight = foo4/8 + foo17/8 +foo30/8 + foo43/8 +foo56/8 + foo69/8 + foo82/8 + foo95/8;
+					System.out.println(toteHeight);
+					double autoPoint = foo5/8 + foo18/8 + foo31/8 + foo44/8 + foo57/8 + foo70/8 + foo83/8 + foo96/8;
+					System.out.println(autoPoint);
+					double canPoint = foo6/8 + foo19/8 + foo32/8 + foo45/8 + foo58/8 + foo71/8 + foo84/8 + foo97/8;
+					System.out.println(canPoint);
+					double canHeight = foo7/8 + foo20/8 + foo33/8 + foo46/8 + foo59/8 + foo72/8 + foo85/8 + foo98/8;
+					System.out.println(canHeight);
+					double litPoint = foo8/8 + foo21/8 + foo34/8 + foo47/8 + foo60/8 + foo73/8 + foo86/8 + foo99/8;
+					System.out.println(litPoint);
+					double litHeight = foo9/8 + foo22/8 + foo35/8 + foo48/8 + foo61/8 + foo74/8 + foo87/8 + foo100/8;
+					System.out.println(litHeight);
+					double coopPoint = foo10/8 + foo23/8 +foo36/8 + foo49/8 + foo62/8 + foo75/8 + foo88/8 + foo101/8;
+					System.out.println(coopPoint);
 				}
 			
 		
