@@ -8,7 +8,7 @@ public class Index {
 	public static void main(String[] args) {
 		
 		try{
-		FileWriter File = new FileWriter("Compiled.txt");
+		FileWriter File = new FileWriter("2498.txt");
 		PrintWriter Printer = new PrintWriter(File);
 		
 		//Printer.println("1");

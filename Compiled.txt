@@ -1,0 +1,6 @@
+Team Number          Tote Points          Tote Height          Auto Points          Can Points          Can Height          Litter Points          Litter Height          Co-op Points
+
+
+3373                 3.25                 3.75                 5.0                  4.125               3.625               3.5                    3.5                    52.5
+
+2498                 1.25                 1.375                 1.625                  1.375               1.5               1.0                    1.25                    17.5

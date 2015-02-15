@@ -423,6 +423,10 @@ public class FileData {
 					
 					
 					FileWriter fStream = new FileWriter("Compiled.txt", true);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(Com + "                 " + teleTote + "                 " + toteHeight + "                 " + autoPoint + "                  " + canPoint + "               " + canHeight + "               " + litPoint + "                    " + litHeight + "                    " + coopPoint);
+					fStream.append(System.getProperty("line.separator"));
+					/*
 					fStream.append("Team Number:" + Com);
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append(System.getProperty("line.separator"));
@@ -459,6 +463,7 @@ public class FileData {
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append(System.getProperty("line.separator"));
+					*/
 					fStream.flush();
 					fStream.close();
 				}
