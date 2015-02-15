@@ -420,6 +420,47 @@ public class FileData {
 					System.out.println(litHeight);
 					double coopPoint = foo10/8 + foo23/8 + foo36/8 + foo49/8 + foo62/8 + foo75/8 + foo88/8 + foo101/8;
 					System.out.println(coopPoint);
+					
+					
+					FileWriter fStream = new FileWriter("Compiled.txt", true);
+					fStream.append("Team Number:" + Com);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average tote points:           " + teleTote);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average highest tote:          " + toteHeight);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average Autonomous Total:      " + autoPoint );
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average Can Points:            " + canPoint);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average Highest Can:           " + canHeight);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average Litter Points:         " + litPoint);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average Litter Height:         " + litHeight);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("____________________________________");
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("Average CoOp Points:           " + coopPoint);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(System.getProperty("line.separator"));
+					fStream.flush();
+					fStream.close();
 				}
 			
 		
