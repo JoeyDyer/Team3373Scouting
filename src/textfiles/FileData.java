@@ -420,11 +420,16 @@ public class FileData {
 					System.out.println(litHeight);
 					double coopPoint = foo10/8 + foo23/8 + foo36/8 + foo49/8 + foo62/8 + foo75/8 + foo88/8 + foo101/8;
 					System.out.println(coopPoint);
-					
+					double totalAverage = teleTote + autoPoint + canPoint + litPoint + coopPoint;
 					
 					FileWriter fStream = new FileWriter("Compiled.txt", true);
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append(Com + "                 " + teleTote + "                 " + toteHeight + "                 " + autoPoint + "                  " + canPoint + "               " + canHeight + "               " + litPoint + "                    " + litHeight + "                    " + coopPoint);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append("          Total Average Points: " + totalAverage);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(System.getProperty("line.separator"));
 					fStream.append(System.getProperty("line.separator"));
 					/*
 					fStream.append("Team Number:" + Com);
