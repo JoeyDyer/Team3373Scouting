@@ -27,7 +27,7 @@ import javax.swing.ImageIcon;
 
 import java.awt.Font;
 
-public class Scouting_GUI {
+ public class Scouting_GUI {
 
 	public JFrame frame;
 	public JTextField txtEnterYourName;
