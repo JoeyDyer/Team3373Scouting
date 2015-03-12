@@ -7,18 +7,22 @@ import java.util.Scanner;
 
 public class Team_File_Creator {
 
-	public static boolean go;
+	public static boolean go = true;
 	public static String end = "end";
 	
-	public static void main(String[] args) {
-		go = true;
+	public static void main(String[] args){
+		two(go);
+	}
+	
+	public static boolean two(Boolean go) {
+
 
 		
 		while(go=true){
 			System.out.println("Enter team number:");
 			Scanner scan = new Scanner(System.in);
 			String teamNumber = scan.nextLine();
-			if(teamNumber.equals(end)){
+			if(teamNumber==end){
 				go = false;
 			}
 			if(go=true){
@@ -29,12 +33,14 @@ public class Team_File_Creator {
 		//Printer.println("1");
 		
 		Printer.close();
-		if(teamNumber.equals(end)){
+		if(teamNumber==end){
 			go = false;
 		}
 	} catch (IOException e) {
 	}
 			}
 }
+		go = go;
+		return go;
 	}
 }
