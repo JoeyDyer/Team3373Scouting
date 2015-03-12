@@ -39,6 +39,16 @@ static int apples = 4;
 		d.browse(new URI("http://www.breadfish.co.uk/"));
 		d.browse(new URI("http://baconsizzling.com/"));
 		d.browse(new URI("http://www.breadfish.co.uk/"));
+		d.browse(new URI("http://baconsizzling.com/"));
+		d.browse(new URI("http://www.breadfish.co.uk/"));
+		d.browse(new URI("http://baconsizzling.com/"));
+		d.browse(new URI("http://www.breadfish.co.uk/"));
+		d.browse(new URI("http://baconsizzling.com/"));
+		d.browse(new URI("http://www.breadfish.co.uk/"));
+		d.browse(new URI("http://baconsizzling.com/"));
+		d.browse(new URI("http://www.breadfish.co.uk/"));
+		d.browse(new URI("http://baconsizzling.com/"));
+		d.browse(new URI("http://www.breadfish.co.uk/"));
 
 		if(apples==4){
 	loop();
