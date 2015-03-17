@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Team_File_Creator {
 
-	public static boolean go = true;
+	public static boolean go;
 	public static String end = "end";
 	
 	public static void main(String[] args){
@@ -16,7 +16,7 @@ public class Team_File_Creator {
 	
 	public static boolean two(Boolean go) {
 
-
+		go=true;
 		
 		while(go=true){
 			System.out.println("Enter team number:");

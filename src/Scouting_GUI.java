@@ -117,7 +117,7 @@ import java.awt.Font;
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
+		frame = new JFrame("Team 3373 Scouting Application");
 		frame.getContentPane().setFont(new Font("Times New Roman", Font.PLAIN, 11));
 		frame.getContentPane().setBackground(new Color(255, 20, 147));
 		frame.setBounds(100, 100, 671, 602);
@@ -131,14 +131,14 @@ import java.awt.Font;
 		
 		
 		
-	
+	/*
 		lblTeamScoutingApplication = new JLabel("3373 Team Scouting Application");
 		GridBagConstraints gbc_lblTeamScoutingApplication_1 = new GridBagConstraints();
 		gbc_lblTeamScoutingApplication_1.insets = new Insets(0, 0, 5, 5);
 		gbc_lblTeamScoutingApplication_1.gridx = 2;
 		gbc_lblTeamScoutingApplication_1.gridy = 0;
 		frame.getContentPane().add(lblTeamScoutingApplication, gbc_lblTeamScoutingApplication_1);
-		
+		*/
 		txtEnterYourName = new JTextField();
 		txtEnterYourName.setText("Enter Your Name Here");
 		GridBagConstraints gbc_txtEnterYourName_1 = new GridBagConstraints();
