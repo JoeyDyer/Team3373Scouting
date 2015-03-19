@@ -1,26 +1,20 @@
  import java.awt.EventQueue;
 
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-
-import java.awt.BorderLayout;
 
 import javax.swing.JButton;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.RenderedImage;
+
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import javax.swing.*;
 
-import java.security.*;
 import java.awt.Color;
 
 import javax.swing.ImageIcon;
@@ -69,9 +63,9 @@ import java.awt.Font;
 	GridBagConstraints gbc_txtEnterNumberOf = new GridBagConstraints();
 	GridBagConstraints gbc_txtEnterAdditionalNotes = new GridBagConstraints();
 	GridBagConstraints gbc_txtEnterPointsEarned_3 = new GridBagConstraints();
-	private JLabel lblNewLabel;
 	private JLabel lblNewLabel_1;
-	private JTextField txtTest;
+	private JButton button_0;
+	private JButton button_01;
 	private JButton button;
 	private JButton button_1;
 	private JButton button_2;
@@ -88,6 +82,8 @@ import java.awt.Font;
 	private JButton button_13;
 	private JButton button_14;
 	private JButton button_15;
+	private JButton button_02;
+	private JButton button_03;
 	
 
 	/**
@@ -140,7 +136,7 @@ import java.awt.Font;
 		frame.getContentPane().add(lblTeamScoutingApplication, gbc_lblTeamScoutingApplication_1);
 		*/
 		txtEnterYourName = new JTextField();
-		txtEnterYourName.setText("Enter Your Name Here");
+		txtEnterYourName.setText("Enter Target Team Number");
 		GridBagConstraints gbc_txtEnterYourName_1 = new GridBagConstraints();
 		gbc_txtEnterYourName_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtEnterYourName_1.insets = new Insets(0, 0, 5, 5);
@@ -150,7 +146,7 @@ import java.awt.Font;
 		frame.getContentPane().add(txtEnterYourName, gbc_txtEnterYourName_1);
 		txtEnterYourName.setColumns(10);
 		
-		lblName = new JLabel("Name");
+		lblName = new JLabel("Team Number");
 		GridBagConstraints gbc_lblName = new GridBagConstraints();
 		gbc_lblName.insets = new Insets(0, 0, 5, 0);
 		gbc_lblName.gridx = 5;
@@ -177,9 +173,20 @@ import java.awt.Font;
 		
 		//HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
 		
+		int vara = 0;
+		int varb = 0;
+		int varc = 0;
+		int vard = 0;
+		int vare = 0;
+		int varf = 0;
+		int varg = 0;
+		int varh = 0;
+		int vari = 0;
+		int varj = 0;
+		
 		txtEnterTargetTeam = new JTextField();
-		txtEnterTargetTeam.setEditable(true);
-		txtEnterTargetTeam.setText("Enter Target Team Number");
+		txtEnterTargetTeam.setEditable(false);
+		txtEnterTargetTeam.setText("" + vari);
 		GridBagConstraints gbc_txtEnterTargetTeam_1 = new GridBagConstraints();
 		gbc_txtEnterTargetTeam_1.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtEnterTargetTeam_1.insets = new Insets(0, 0, 5, 5);
@@ -189,21 +196,12 @@ import java.awt.Font;
 		frame.getContentPane().add(txtEnterTargetTeam, gbc_txtEnterTargetTeam_1);
 		txtEnterTargetTeam.setColumns(10);
 		
-		lblTeamNumber = new JLabel("Team Number");
+		lblTeamNumber = new JLabel("Alliance Zone");
 		GridBagConstraints gbc_lblTeamNumber = new GridBagConstraints();
 		gbc_lblTeamNumber.insets = new Insets(0, 0, 5, 0);
 		gbc_lblTeamNumber.gridx = 5;
 		gbc_lblTeamNumber.gridy = 3;
 		frame.getContentPane().add(lblTeamNumber, gbc_lblTeamNumber);
-		
-		int vara = 0;
-		int varb = 0;
-		int varc = 0;
-		int vard = 0;
-		int vare = 0;
-		int varf = 0;
-		int varg = 0;
-		int varh = 0;
 
 		
 		txtEnterPointsScored = new JTextField();
@@ -217,6 +215,34 @@ import java.awt.Font;
 		gbc_txtEnterPointsScored_1.gridy = 4;
 		frame.getContentPane().add(txtEnterPointsScored, gbc_txtEnterPointsScored_1);
 		txtEnterPointsScored.setColumns(10);
+		
+		button_0 = new JButton("+");
+		GridBagConstraints gbc_button_0 = new GridBagConstraints();
+		gbc_button_0.insets = new Insets(0, 0, 5, 5);
+		gbc_button_0.gridx = 3;
+		gbc_button_0.gridy = 3;
+		frame.getContentPane().add(button_0, gbc_button_0);
+		
+		button_01 = new JButton("-");
+		GridBagConstraints gbc_button_01 = new GridBagConstraints();
+		gbc_button_01.insets = new Insets(0, 0, 5, 5);
+		gbc_button_01.gridx = 4;
+		gbc_button_01.gridy = 3;
+		frame.getContentPane().add(button_01, gbc_button_01);
+		
+		button_02 = new JButton("+");
+		GridBagConstraints gbc_button_02 = new GridBagConstraints();
+		gbc_button_02.insets = new Insets(0, 0, 5, 5);
+		gbc_button_02.gridx = 3;
+		gbc_button_02.gridy = 12;
+		frame.getContentPane().add(button_02, gbc_button_02);
+		
+		button_03 = new JButton("-");
+		GridBagConstraints gbc_button_03 = new GridBagConstraints();
+		gbc_button_03.insets = new Insets(0, 0, 5, 5);
+		gbc_button_03.gridx = 4;
+		gbc_button_03.gridy = 12;
+		frame.getContentPane().add(button_03, gbc_button_03);
 		
 		button = new JButton("+");
 		GridBagConstraints gbc_button = new GridBagConstraints();
@@ -236,7 +262,7 @@ import java.awt.Font;
 		gbc_button_1.gridy = 4;
 		frame.getContentPane().add(button_1, gbc_button_1);
 		
-		lblAutonomousPoints = new JLabel("Autonomous Points");
+		lblAutonomousPoints = new JLabel("Totes in Alliance Zone");
 		GridBagConstraints gbc_lblAutonomousPoints = new GridBagConstraints();
 		gbc_lblAutonomousPoints.insets = new Insets(0, 0, 5, 0);
 		gbc_lblAutonomousPoints.gridx = 5;
@@ -269,7 +295,7 @@ import java.awt.Font;
 		gbc_button_3.gridy = 5;
 		frame.getContentPane().add(button_3, gbc_button_3);
 		
-		lblTotePoints = new JLabel("Tote Points");
+		lblTotePoints = new JLabel("Cans in Alliance Zone");
 		GridBagConstraints gbc_lblTotePoints = new GridBagConstraints();
 		gbc_lblTotePoints.insets = new Insets(0, 0, 5, 0);
 		gbc_lblTotePoints.gridx = 5;
@@ -302,7 +328,7 @@ import java.awt.Font;
 		gbc_button_5.gridy = 6;
 		frame.getContentPane().add(button_5, gbc_button_5);
 		
-		lblToteHeight = new JLabel("Tote Height");
+		lblToteHeight = new JLabel("Game Pieces on/off Step");
 		GridBagConstraints gbc_lblToteHeight = new GridBagConstraints();
 		gbc_lblToteHeight.insets = new Insets(0, 0, 5, 0);
 		gbc_lblToteHeight.gridx = 5;
@@ -335,7 +361,7 @@ import java.awt.Font;
 		gbc_button_7.gridy = 7;
 		frame.getContentPane().add(button_7, gbc_button_7);
 		
-		lblCanPoints = new JLabel("Can Points");
+		lblCanPoints = new JLabel("Highest Tote");
 		GridBagConstraints gbc_lblCanPoints = new GridBagConstraints();
 		gbc_lblCanPoints.insets = new Insets(0, 0, 5, 0);
 		gbc_lblCanPoints.gridx = 5;
@@ -368,7 +394,7 @@ import java.awt.Font;
 		gbc_button_9.gridy = 8;
 		frame.getContentPane().add(button_9, gbc_button_9);
 		
-		lblCanHeight = new JLabel("Can Height");
+		lblCanHeight = new JLabel("Cans on Platform");
 		GridBagConstraints gbc_lblCanHeight = new GridBagConstraints();
 		gbc_lblCanHeight.insets = new Insets(0, 0, 5, 0);
 		gbc_lblCanHeight.gridx = 5;
@@ -401,7 +427,7 @@ import java.awt.Font;
 		gbc_button_11.gridy = 9;
 		frame.getContentPane().add(button_11, gbc_button_11);
 		
-		lblLitterPoints = new JLabel("Litter Points");
+		lblLitterPoints = new JLabel("Totes on Platform");
 		GridBagConstraints gbc_lblLitterPoints = new GridBagConstraints();
 		gbc_lblLitterPoints.insets = new Insets(0, 0, 5, 0);
 		gbc_lblLitterPoints.gridx = 5;
@@ -435,7 +461,7 @@ import java.awt.Font;
 		gbc_button_13.gridy = 10;
 		frame.getContentPane().add(button_13, gbc_button_13);
 		
-		lblLitterHeight = new JLabel("Litter Height");
+		lblLitterHeight = new JLabel("Highest Level Stack");
 		GridBagConstraints gbc_lblLitterHeight = new GridBagConstraints();
 		gbc_lblLitterHeight.insets = new Insets(0, 0, 5, 0);
 		gbc_lblLitterHeight.gridx = 5;
@@ -469,7 +495,7 @@ import java.awt.Font;
 		gbc_button_15.gridy = 11;
 		frame.getContentPane().add(button_15, gbc_button_15);
 		
-		lblCoopertitionPoints = new JLabel("Coopertition Points");
+		lblCoopertitionPoints = new JLabel("Cans on Totes");
 		GridBagConstraints gbc_lblCoopertitionPoints = new GridBagConstraints();
 		gbc_lblCoopertitionPoints.insets = new Insets(0, 0, 5, 0);
 		gbc_lblCoopertitionPoints.gridx = 5;
@@ -477,9 +503,9 @@ import java.awt.Font;
 		frame.getContentPane().add(lblCoopertitionPoints, gbc_lblCoopertitionPoints);
 		
 		txtEnterAdditionalNotes = new JTextField();
-		txtEnterAdditionalNotes.setEditable(true);
+		txtEnterAdditionalNotes.setEditable(false);
 		txtEnterAdditionalNotes.setBackground(Color.WHITE);
-		txtEnterAdditionalNotes.setText("Enter Additional Notes Here");
+		txtEnterAdditionalNotes.setText("" + varj);
 		GridBagConstraints gbc_txtEnterAdditionalNotes_1 = new GridBagConstraints();
 		gbc_txtEnterAdditionalNotes_1.anchor = GridBagConstraints.NORTH;
 		gbc_txtEnterAdditionalNotes_1.gridheight = 2;
@@ -491,7 +517,7 @@ import java.awt.Font;
 		frame.getContentPane().add(txtEnterAdditionalNotes, gbc_txtEnterAdditionalNotes_1);
 		txtEnterAdditionalNotes.setColumns(10);
 		
-		lblAdditionalNotes = new JLabel("Additional Notes");
+		lblAdditionalNotes = new JLabel("Litter in/on Cans");
 		GridBagConstraints gbc_lblAdditionalNotes = new GridBagConstraints();
 		gbc_lblAdditionalNotes.insets = new Insets(0, 0, 5, 0);
 		gbc_lblAdditionalNotes.gridx = 5;
@@ -508,10 +534,11 @@ import java.awt.Font;
 		gbc_lblNewLabel_1.gridy = 13;
 		frame.getContentPane().add(lblNewLabel_1, gbc_lblNewLabel_1);
 		
-		HandlerClass handler = new HandlerClass(txtEnterTargetTeam, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName);
+		HandlerClass handler = new HandlerClass(txtEnterYourName, txtEnterMatchNumber, txtEnterPointsEarned, txtEnterMaximumHeight, txtEnterPointsScored, txtEnterPointsEarned_1, txtEnterMaximumHeight_1, txtEnterPointsEarned_2, txtEnterNumberOf, txtEnterPointsEarned_3, txtEnterAdditionalNotes, txtEnterYourName, txtEnterTargetTeam);
 		
 		btnSubmit = new JButton("Submit");
 		btnSubmit.setBackground(Color.WHITE);
+	  //btnSubmit.setBackground(Color.CYAN);
 		GridBagConstraints gbc_btnSubmit = new GridBagConstraints();
 		gbc_btnSubmit.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnSubmit.insets = new Insets(0, 0, 5, 5);
@@ -523,7 +550,8 @@ import java.awt.Font;
 		
 
 	
-		
+		button_0.addActionListener(new Plus0(1,2,3,4,5,6,7,8,txtEnterTargetTeam, txtEnterTargetTeam));
+		button_01.addActionListener(new Minus0(1,2,3,4,5,6,7,8,txtEnterTargetTeam, txtEnterTargetTeam));
 		button.addActionListener(new Plus1(1,2,3,4,5,6,7,8,txtEnterPointsScored, txtEnterPointsScored));
 		button_1.addActionListener(new Minus1(1,2,3,4,5,6,7,8,txtEnterPointsScored, txtEnterPointsScored));
 		button_2.addActionListener(new Plus2(1,2,3,4,5,6,7,8, txtEnterPointsEarned, txtEnterPointsEarned));
@@ -539,7 +567,9 @@ import java.awt.Font;
 		button_12.addActionListener(new Plus7(1,2,3,4,5,6,7,8,txtEnterNumberOf, txtEnterNumberOf));
 		button_13.addActionListener(new Minus7(1,2,3,4,5,6,7,8,txtEnterNumberOf,txtEnterNumberOf));
 		button_14.addActionListener(new Plus8(1,2,3,4,5,6,7,8,txtEnterPointsEarned_3,txtEnterPointsEarned_3));
-		button_15.addActionListener(new Minus8(1,2,3,4,5,6,7,8,txtEnterPointsEarned_3,txtEnterPointsEarned_3));		
+		button_15.addActionListener(new Minus8(1,2,3,4,5,6,7,8,txtEnterPointsEarned_3,txtEnterPointsEarned_3));
+		button_02.addActionListener(new Plus02(1,2,3,4,5,6,7,8,txtEnterAdditionalNotes, txtEnterAdditionalNotes));
+		button_03.addActionListener(new Minus02(1,2,3,4,5,6,7,8,txtEnterAdditionalNotes, txtEnterAdditionalNotes));
 	}
 	
 		class HandlerClass implements ActionListener{
@@ -555,7 +585,9 @@ import java.awt.Font;
 			private JTextField coopPoints;
 			private JTextField addNotes;
 			private JTextField scoutName;
-		private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield7, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12) {
+			private JTextField allianceZone;
+			//private JTextField litterScore;
+		private HandlerClass(JTextField textfield1, JTextField textfield2, JTextField textfield3, JTextField textfield4, JTextField textfield5, JTextField textfield6, JTextField textfield7, JTextField textfield8, JTextField textfield9, JTextField textfield10, JTextField textfield11, JTextField textfield12, JTextField textfield13) {
 				this.targetTeam = textfield1;
 				this.matchNumber = textfield2;
 				this.totePoints = textfield3;
@@ -568,6 +600,8 @@ import java.awt.Font;
 				this.coopPoints = textfield10;
 				this.addNotes = textfield11;
 				this.scoutName = textfield12;
+				//this.litterScore = textfield11;
+				this.allianceZone = textfield13;
 			}
 			public void actionPerformed(ActionEvent event){
 				try{
@@ -596,25 +630,25 @@ import java.awt.Font;
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append("Match Number:"+ matchNumber.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Teleop Tote Points Earned:"+ totePoints.getText());
+					fStream.append("Alliance Zone:"+ allianceZone.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Maximum Tote Height:"+ toteHeight.getText());
+					fStream.append("Totes in Alliance Zone:"+ autoPoints.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Autonomous points scored:"+ autoPoints.getText());
+					fStream.append("Cans in Alliance Zone:"+ totePoints.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Can stack points:"+ canPoints.getText());
+					fStream.append("Game Pieces on/off Step:"+ toteHeight.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Maximum can stacking height:"+ canHeight.getText());
+					fStream.append("Highest Tote Stacked:"+ canPoints.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Litter points:"+ literPoints.getText());
+					fStream.append("Cans on Platform:"+ canHeight.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Maximum Litter Height:"+ literHeight.getText());
+					fStream.append("Totes on Platform:"+ literPoints.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Points earned by coopertition:"+ coopPoints.getText());
+					fStream.append("Highest Level Tote/Can Stacked:"+ literHeight.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Additional Notes:"+ addNotes.getText()+"0");
+					fStream.append("Cans on Totes on the Platform:"+ coopPoints.getText());
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("Name of Scout:"+ scoutName.getText()+"0");
+					fStream.append("Litter in/on Cans:"+ addNotes.getText());
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append("0____________________________________0");
 					fStream.append(System.getProperty("line.separator"));
@@ -627,7 +661,7 @@ import java.awt.Font;
 					i += 1;
 					index = Integer.toString(i);
 					Files.write(Paths.get("index.txt"), index.getBytes());
-					targetTeam.setText("");
+					targetTeam.setText("0");
 					matchNumber.setText("");
 					totePoints.setText("0");
 					toteHeight.setText("0");
@@ -637,8 +671,9 @@ import java.awt.Font;
 					literPoints.setText("0");
 					literHeight.setText("0");
 					coopPoints.setText("0");
-					addNotes.setText("");
+					addNotes.setText("0");
 					scoutName.setText("");
+					allianceZone.setText("0");
 					
 					//int num = 0;
 				} catch (IOException e){
@@ -651,24 +686,10 @@ import java.awt.Font;
 		
 	class Plus1 implements ActionListener{
 		private int va;
-		private int vb;
-		private int vc;
-		private int vd;
-		private int ve;
-		private int vf;
-		private int vg;
-		private int vh;
 		private JTextField num2;
 		private JTextField te;
 		private Plus1(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 			a= this.va;
-			this.vb = b;
-			this.vc = c;
-			this.vd = d;
-			this.ve = e;
-			this.vf = f;
-			this.vg = g;
-			this.vh = h;
 			this.num2 = num;
 			this.te = tf1;
 
@@ -691,24 +712,118 @@ import java.awt.Font;
 
 	class Minus1 implements ActionListener{
 		private int va;
-		private int vb;
-		private int vc;
-		private int vd;
-		private int ve;
-		private int vf;
-		private int vg;
-		private int vh;
 		private JTextField num2;
 		private JTextField te;
 		private Minus1(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 			a= this.va;
-			this.vb = b;
-			this.vc = c;
-			this.vd = d;
-			this.ve = e;
-			this.vf = f;
-			this.vg = g;
-			this.vh = h;
+			this.num2 = num;
+			this.te = tf1;
+
+		
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			String bob = (num2.getText()).toString();
+			int foo = Integer.parseInt(bob);
+			foo = foo-1;
+			if(foo < 0){
+			}
+			else
+			//int bob2 = ((Integer) bob);
+		//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+			te.setText(((Integer)foo).toString());
+			
+		}
+	}
+	
+	class Plus0 implements ActionListener{
+		private int va;
+		private JTextField num2;
+		private JTextField te;
+		private Plus0(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+			a= this.va;
+			this.num2 = num;
+			this.te = tf1;
+
+		
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			String bob = (num2.getText()).toString();
+			int foo = Integer.parseInt(bob);
+			foo = foo+1;
+			if(foo < 0){
+			}
+			else
+			//int bob2 = ((Integer) bob);
+		//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+			te.setText(((Integer)foo).toString());
+			
+		}
+	}
+	
+	class Minus0 implements ActionListener{
+		private int va;
+		private JTextField num2;
+		private JTextField te;
+		private Minus0(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+			a= this.va;
+			this.num2 = num;
+			this.te = tf1;
+
+		
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			String bob = (num2.getText()).toString();
+			int foo = Integer.parseInt(bob);
+			foo = foo-1;
+			if(foo < 0){
+			}
+			else
+			//int bob2 = ((Integer) bob);
+		//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+			te.setText(((Integer)foo).toString());
+			
+		}
+	}
+	
+	class Plus02 implements ActionListener{
+		private int va;
+		private JTextField num2;
+		private JTextField te;
+		private Plus02(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+			a= this.va;
+			this.num2 = num;
+			this.te = tf1;
+
+		
+		}
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			String bob = (num2.getText()).toString();
+			int foo = Integer.parseInt(bob);
+			foo = foo+1;
+			if(foo < 0){
+			}
+			else
+			//int bob2 = ((Integer) bob);
+		//	String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
+			te.setText(((Integer)foo).toString());
+			
+		}
+	}
+	
+	class Minus02 implements ActionListener{
+		private int va;
+		private JTextField num2;
+		private JTextField te;
+		private Minus02(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
+			a= this.va;
 			this.num2 = num;
 			this.te = tf1;
 
@@ -732,24 +847,10 @@ import java.awt.Font;
 			
 			 class Plus2 implements ActionListener{
 				private int va;
-				private int vb;
-				private int vc;
-				private int vd;
-				private int ve;
-				private int vf;
-				private int vg;
-				private int vh;
 				private JTextField num2;
 				private JTextField te;
 				private Plus2(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 					a= this.va;
-					this.vb = b;
-					this.vc = c;
-					this.vd = d;
-					this.ve = e;
-					this.vf = f;
-					this.vg = g;
-					this.vh = h;
 					this.num2 = num;
 					this.te = tf1;
 
@@ -771,24 +872,10 @@ import java.awt.Font;
 	}
 			 class Minus2 implements ActionListener{
 				private int va;
-				private int vb;
-				private int vc;
-				private int vd;
-				private int ve;
-				private int vf;
-				private int vg;
-				private int vh;
 				private JTextField num2;
 				private JTextField te;
 				private Minus2(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 					a= this.va;
-					this.vb = b;
-					this.vc = c;
-					this.vd = d;
-					this.ve = e;
-					this.vf = f;
-					this.vg = g;
-					this.vh = h;
 					this.num2 = num;
 					this.te = tf1;
 
@@ -811,24 +898,10 @@ import java.awt.Font;
 			 }
 				class Plus3 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Plus3(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -848,24 +921,10 @@ import java.awt.Font;
 				}
 				class Minus3 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Minus3(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -888,24 +947,10 @@ import java.awt.Font;
 				}
 				class Plus4 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Plus4(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -924,24 +969,10 @@ import java.awt.Font;
 				}
 				class Minus4 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Minus4(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -962,24 +993,10 @@ import java.awt.Font;
 				}
 				class Plus5 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Plus5(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -999,24 +1016,10 @@ import java.awt.Font;
 				}
 				class Minus5 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Minus5(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1039,24 +1042,10 @@ import java.awt.Font;
 				}
 				class Plus6 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Plus6(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1076,24 +1065,10 @@ import java.awt.Font;
 				}
 				class Minus6 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Minus6(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1116,24 +1091,10 @@ import java.awt.Font;
 				}
 				class Plus7 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Plus7(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1153,24 +1114,10 @@ import java.awt.Font;
 				}
 				class Minus7 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Minus7(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1193,24 +1140,10 @@ import java.awt.Font;
 				}
 				class Plus8 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Plus8(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1222,7 +1155,7 @@ import java.awt.Font;
 					public void actionPerformed(ActionEvent e) {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
-						foo = foo+20;
+						foo = foo+1;
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 						te.setText(((Integer)foo).toString());
@@ -1230,24 +1163,10 @@ import java.awt.Font;
 				}
 				class Minus8 implements ActionListener{
 					private int va;
-					private int vb;
-					private int vc;
-					private int vd;
-					private int ve;
-					private int vf;
-					private int vg;
-					private int vh;
 					private JTextField num2;
 					private JTextField te;
 					private Minus8(int a, int b, int c, int d, int e, int f, int g, int h, JTextField num, JTextField tf1){
 						a= this.va;
-						this.vb = b;
-						this.vc = c;
-						this.vd = d;
-						this.ve = e;
-						this.vf = f;
-						this.vg = g;
-						this.vh = h;
 						this.num2 = num;
 						this.te = tf1;
 
@@ -1259,7 +1178,7 @@ import java.awt.Font;
 					public void actionPerformed(ActionEvent e) {
 						String bob = (num2.getText()).toString();
 						int foo = Integer.parseInt(bob);
-						foo = foo-20;
+						foo = foo-1;
 						//int bob2 = ((Integer) bob);
 						//String bob2 = bob.replaceFirst(".*?(//d+).*", "$1");
 					if(foo < 0){
