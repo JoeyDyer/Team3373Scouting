@@ -2,8 +2,6 @@ package textfiles;
 import java.io.*;
 import java.util.*;
 
-import javax.swing.*;
-
 public class FileData {
 
 	public static void main(String[] args) throws IOException {
@@ -22,7 +20,7 @@ public class FileData {
 				int i;
 				for(i=0; i < aryLines.length; i++ ){
 				
-					String[] bob = aryLines[i].split("");
+	//				String[] bob = aryLines[i].split("");
 				//	String a = bob.replaceAll("[^0-9]", "");
 				/*	//String bobitoito = bob[i].replaceAll("[0-9]", "");
 					String pomo = bob[i].replaceAll("[0-9]", "");
@@ -66,12 +64,13 @@ public class FileData {
 					//System.out.println(foo);
 					//int gogogo = i-1;
 					//System.out.println(i);
-				/*String bob = aryLines[0];
-				String a = bob.replaceAll("[^0-9]", "");
-				double foo = Integer.parseInt(a);
-					//String bob2 = aryLines[1];
-					//String b = bob2.replaceAll("[^0-9]", "");
-					//double foo2 = Integer.parseInt(b);*/
+					String bob = aryLines[0];
+					String a = bob.replaceAll("[^0-9]", "");
+					double foo = Integer.parseInt(a);
+					/*String bob2 = aryLines[1];
+					String b = bob2.replaceAll("[^0-9]", "");
+					double foo2 = Integer.parseInt(b);
+					*/
 					String bob3 = aryLines[2];
 					String c = bob3.replaceAll("[^0-9]", "");
 					double foo3 = Integer.parseInt(c);
@@ -100,7 +99,7 @@ public class FileData {
 					String bob10 = aryLines[9];
 					String l = bob10.replaceAll("[^0-9]", "");
 					double foo10 = Integer.parseInt(l);
-					/*String bob11 = aryLines[10];
+					String bob11 = aryLines[10];
 					String m = bob11.replaceAll("[^0-9]", "");
 					double foo11 = Integer.parseInt(m);
 					String bob12 = aryLines[11];
@@ -112,9 +111,11 @@ public class FileData {
 					String bob14 = aryLines[13];
 					String p = bob14.replaceAll("[^0-9]", "");
 					double foo14 = Integer.parseInt(p);
-					String bob15 = aryLines[14];
+					
+					/*String bob15 = aryLines[14];
 					String q  = bob15.replaceAll("[^0-9]", "");
-					double foo15 = Integer.parseInt(q);*/
+					double foo15 = Integer.parseInt(q);
+					*/
 					String bob16 = aryLines[15];
 					String r = bob16.replaceAll("[^0-9]", "");
 					double foo16 = Integer.parseInt(r);
@@ -139,7 +140,7 @@ public class FileData {
 					String bob23 = aryLines[22];
 					String y = bob23.replaceAll("[^0-9]", "");
 					double foo23 = Integer.parseInt(y);
-					/*String bob24 = aryLines[23];
+					String bob24 = aryLines[23];
 					String h = bob24.replaceAll("[^0-9]", "");
 					double foo24 = Integer.parseInt(h);
 					String bob25 = aryLines[24];
@@ -148,13 +149,16 @@ public class FileData {
 					String bob26 = aryLines[25];
 					String aa = bob26.replaceAll("[^0-9]", "");
 					double foo26 = Integer.parseInt(aa);
+					
 					String bob27 = aryLines[26];
 					String ba = bob27.replaceAll("[^0-9]", "");
 					double foo27 = Integer.parseInt(ba);
-					String bob28 = aryLines[27];
+				/*	String bob28 = aryLines[27];
 					String ca = bob28.replaceAll("[^0-9]", "");
-					double foo28 = Integer.parseInt(ca);*/
+					double foo28 = Integer.parseInt(ca);
+					*/
 					String bob29 = aryLines[28];
+					
 					String da = bob29.replaceAll("[^0-9]", "");
 					double foo29 = Integer.parseInt(da);
 					String bob30 = aryLines[29];
@@ -178,21 +182,23 @@ public class FileData {
 					String bob36 = aryLines[35];
 					String ka = bob36.replaceAll("[^0-9]", "");
 					double foo36 = Integer.parseInt(ka);
-					/*String bob37 = aryLines[36];
+					String bob37 = aryLines[36];
 					String la = bob37.replaceAll("[^0-9]", "");
 					double foo37 = Integer.parseInt(la);
 					String bob38 = aryLines[37];
 					String ma = bob38.replaceAll("[^0-9]", "");
 					double foo38 = Integer.parseInt(ma);
+					
 					String bob39 = aryLines[38];
 					String na = bob39.replaceAll("[^0-9]", "");
 					double foo39 = Integer.parseInt(na);
 					String bob40 = aryLines[39];
 					String oa = bob40.replaceAll("[^0-9]", "");
 					double foo40 = Integer.parseInt(oa);
-					String bob41 = aryLines[40];
+				/*	String bob41 = aryLines[40];
 					String pa = bob41.replaceAll("[^0-9]", "");
-					double foo41 = Integer.parseInt(pa);*/
+					double foo41 = Integer.parseInt(pa);
+					*/
 					String bob42 = aryLines[41];
 					String qa = bob42.replaceAll("[^0-9]", "");
 					double foo42 = Integer.parseInt(qa);
@@ -217,9 +223,10 @@ public class FileData {
 					String bob49 = aryLines[48];
 					String xa = bob49.replaceAll("[^0-9]", "");
 					double foo49 = Integer.parseInt(xa);
-					/*String bob50 = aryLines[49];
+					String bob50 = aryLines[49];
 					String ya = bob50.replaceAll("[^0-9]", "");
 					double foo50 = Integer.parseInt(ya);
+					
 					String bob51 = aryLines[50];
 					String za = bob51.replaceAll("[^0-9]", "");
 					double foo51 = Integer.parseInt(za);
@@ -229,9 +236,10 @@ public class FileData {
 					String bob53 = aryLines[52];
 					String bb = bob53.replaceAll("[^0-9]", "");
 					double foo53 = Integer.parseInt(bb);
-					String bob54 = aryLines[53];
+					/*String bob54 = aryLines[53];
 					String cb = bob54.replaceAll("[^0-9]", "");
-					double foo54 = Integer.parseInt(cb);*/
+					double foo54 = Integer.parseInt(cb);
+					*/
 					String bob55 = aryLines[54];
 					String db = bob55.replaceAll("[^0-9]", "");
 					double foo55 = Integer.parseInt(db);
@@ -256,7 +264,8 @@ public class FileData {
 					String bob62 = aryLines[61];
 					String kb = bob62.replaceAll("[^0-9]", "");
 					double foo62 = Integer.parseInt(kb);
-					/*String bob63 = aryLines[62];
+					
+					String bob63 = aryLines[62];
 					String lb = bob63.replaceAll("[^0-9]", "");
 					double foo63 = Integer.parseInt(lb);
 					String bob64 = aryLines[63];
@@ -268,9 +277,10 @@ public class FileData {
 					String bob66 = aryLines[65];
 					String ob = bob66.replaceAll("[^0-9]", "");
 					double foo66 = Integer.parseInt(ob);
-					String bob67 = aryLines[66];
+					/*String bob67 = aryLines[66];
 					String pb = bob67.replaceAll("[^0-9]", "");
-					double foo67 = Integer.parseInt(pb);*/
+					double foo67 = Integer.parseInt(pb);
+					*/
 					String bob68 = aryLines[67];
 					String qb = bob68.replaceAll("[^0-9]", "");
 					double foo68 = Integer.parseInt(qb);
@@ -292,10 +302,11 @@ public class FileData {
 					String bob74 = aryLines[73];
 					String wb = bob74.replaceAll("[^0-9]", "");
 					double foo74 = Integer.parseInt(wb);
+					
 					String bob75 = aryLines[74];
 					String xb= bob75.replaceAll("[^0-9]", "");
 					double foo75 = Integer.parseInt(xb);
-					/*String bob76 = aryLines[75];
+					String bob76 = aryLines[75];
 					String yb = bob76.replaceAll("[^0-9]", "");
 					double foo76 = Integer.parseInt(yb);
 					String bob77 = aryLines[76];
@@ -307,9 +318,10 @@ public class FileData {
 					String bob79 = aryLines[78];
 					String bc = bob79.replaceAll("[^0-9]", "");
 					double foo79 = Integer.parseInt(bc);
-					String bob80 = aryLines[79];
+					/*String bob80 = aryLines[79];
 					String cc = bob80.replaceAll("[^0-9]", "");
-					double foo80 = Integer.parseInt(cc);*/
+					double foo80 = Integer.parseInt(cc);
+					*/
 					String bob81 = aryLines[80];
 					String dc = bob81.replaceAll("[^0-9]", "");
 					double foo81 = Integer.parseInt(dc);
@@ -328,13 +340,14 @@ public class FileData {
 					String bob86 = aryLines[85];
 					String ic = bob86.replaceAll("[^0-9]", "");
 					double foo86 = Integer.parseInt(ic);
+					
 					String bob87 = aryLines[86];
 					String jc = bob87.replaceAll("[^0-9]", "");
 					double foo87 = Integer.parseInt(jc);
 					String bob88 = aryLines[87];
 					String kc = bob88.replaceAll("[^0-9]", "");
 					double foo88 = Integer.parseInt(kc);
-					/*String bob89 = aryLines[88];
+					String bob89 = aryLines[88];
 					String lc = bob89.replaceAll("[^0-9]", "");
 					double foo89 = Integer.parseInt(lc);
 					String bob90 = aryLines[89];
@@ -346,9 +359,10 @@ public class FileData {
 					String bob92 = aryLines[91];
 					String oc = bob92.replaceAll("[^0-9]", "");
 					double foo92 = Integer.parseInt(oc);
-					String bob93 = aryLines[92];
+					/*String bob93 = aryLines[92];
 					String pc = bob93.replaceAll("[^0-9]", "");
-					double foo93 = Integer.parseInt(pc);*/
+					double foo93 = Integer.parseInt(pc);
+					*/
 					String bob94 = aryLines[93];
 					String qc = bob94.replaceAll("[^0-9]", "");
 					double foo94 = Integer.parseInt(qc);
@@ -364,6 +378,7 @@ public class FileData {
 					String bob98 = aryLines[97];
 					String uc = bob98.replaceAll("[^0-9]", "");
 					double foo98 = Integer.parseInt(uc);
+					
 					String bob99 = aryLines[98];
 					String vc = bob99.replaceAll("[^0-9]", "");
 					double foo99 = Integer.parseInt(vc);
@@ -373,7 +388,7 @@ public class FileData {
 					String bob101 = aryLines[100];
 					String xc = bob101.replaceAll("[^0-9]", "");
 					double foo101 = Integer.parseInt(xc);
-					/*String bob102 = aryLines[101];
+					String bob102 = aryLines[101];
 					String yc = bob102.replaceAll("[^0-9]", "");
 					double foo102 = Integer.parseInt(yc);
 					String bob103 = aryLines[102];
@@ -381,7 +396,7 @@ public class FileData {
 					double foo103 = Integer.parseInt(zc);
 					String bob104 = aryLines[103];
 					String ad = bob104.replaceAll("[^0-9]", "");
-					double foo104 = Integer.parseInt(ad);*/
+					double foo104 = Integer.parseInt(ad);
 					
 					//System.out.println(foo2 + foo3 + foo4 + foo5 + foo6 + foo7 + foo8 + foo9 + foo10 + foo11 + foo12 + foo13 + foo14);
 					//System.out.println(foo3);
@@ -403,7 +418,7 @@ public class FileData {
 				/**	3, 16, 29, 42, 55, 68, 81, 94
 				 * 
 				 */
-					
+					/**
 					double teleTote = foo3/8 + foo16/8 + foo29/8 + foo42/8 + foo55/8 + foo68/8 + foo81/8 + foo94/8;
 					System.out.println(teleTote);
 					double toteHeight = foo4/8 + foo17/8 +foo30/8 + foo43/8 +foo56/8 + foo69/8 + foo82/8 + foo95/8;
@@ -421,16 +436,42 @@ public class FileData {
 					double coopPoint = foo10/8 + foo23/8 + foo36/8 + foo49/8 + foo62/8 + foo75/8 + foo88/8 + foo101/8;
 					System.out.println(coopPoint);
 					double totalAverage = teleTote + autoPoint + canPoint + litPoint + coopPoint;
+					*/
+					
+					double allianceZone = foo3/8 + foo16/8 + foo29/8 + foo42/8 + foo55/8 + foo68/8 + foo81/8 + foo94/8;
+					System.out.println(allianceZone);
+					double autoTotes = foo4/8 + foo17/8 + foo30/8 + foo43/8 + foo56/8 + foo69/8 + foo82/8 + foo95/8;
+					System.out.println(autoTotes);
+					double autoCans = foo5/8 + foo18/8 + foo31/8 + foo44/8 + foo57/8 + foo70/8 + foo83/8 + foo96/8;
+					System.out.println(autoCans);
+					double gamePieces = foo6/8 + foo19/8 + foo32/8 + foo45/8 + foo58/8 + foo71/8 + foo84/8 + foo97/8;
+					System.out.println(gamePieces);
+					double toteHeight = foo7/8 + foo20/8 + foo33/8 + foo46/8 + foo59/8 + foo72/8 + foo85/8 + foo98/8;
+					System.out.println(toteHeight);
+					double platformCans = foo8/8 + foo21/8 + foo34/8 + foo47/8 + foo60/8 + foo73/8 + foo86/8 + foo99/8;
+					System.out.println(platformCans);
+					double platformTotes = foo9/8 + foo22/8 + foo35/8 + foo48/8 + foo61/8 + foo74/8 + foo87/8 + foo100/8;
+					System.out.println(platformTotes);
+					double maxHeight = foo10/8 + foo23/8 + foo36/8 + foo49/8 + foo62/8 + foo76/8 + foo88/8 + foo101/8;
+					System.out.println(maxHeight);
+					double platformCansAndTotes = foo11/8 + foo24/8 + foo37/8 + foo50/8 + foo63/8 + foo77/8 + foo89/8 + foo102/8;
+					System.out.println(platformCansAndTotes);
+					double litterInCan = foo12/8 + foo25/8 + foo38/8 + foo51/8 + foo64/8 + foo78/8 + foo90/8 + foo103/8;
+					System.out.println(allianceZone);
+				//	TODO Alter Printer
+					
+					
 					
 					FileWriter fStream = new FileWriter("Compiled.txt", true);
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append(Com + "                 " + teleTote + "                 " + toteHeight + "                 " + autoPoint + "                  " + canPoint + "               " + canHeight + "               " + litPoint + "                    " + litHeight + "                    " + coopPoint);
+					fStream.append(System.getProperty("line.separator"));
+					fStream.append(Com + "        " + allianceZone + "            " + autoTotes + "                  " + autoCans + "               " + gamePieces + "                " + toteHeight + "                 " + platformCans + "             " + platformTotes + "              " + maxHeight + "              " + platformCansAndTotes + "          " + litterInCan);
 					fStream.append(System.getProperty("line.separator"));
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append("          Total Average Points: " + totalAverage);
+				//	fStream.append("          Total Average Points: " + totalAverage);
 					fStream.append(System.getProperty("line.separator"));
-					fStream.append(System.getProperty("line.separator"));
-					fStream.append(System.getProperty("line.separator"));
+					
+					
 					/*
 					fStream.append("Team Number:" + Com);
 					fStream.append(System.getProperty("line.separator"));

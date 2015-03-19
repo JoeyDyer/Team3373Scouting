@@ -1,3 +1,3 @@
-Team Number          Tote Points          Tote Height          Auto Points          Can Points          Can Height          Litter Points          Litter Height          Co-op Points
+Team Number Alliance Zone  Alliance Zone Totes  Alliance Zone Cans  Game Pieces On/Off Step  Highest Tote  Cans On Platform  Totes On Platform  Highest Tote/Can  Cans On Totes  Litter In Cans
 
 
