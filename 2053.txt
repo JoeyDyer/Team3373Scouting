@@ -1,0 +1,65 @@
+Team Number:2053
+Match Number:11
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:1
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:0
+Totes on Platform:3
+Highest Level Tote/Can Stacked:2
+Cans on Totes on the Platform:0
+Litter in/on Cans:0
+0____________________________________0
+Team Number:2053
+Match Number:16
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:0
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:0
+Totes on Platform:2
+Highest Level Tote/Can Stacked:1
+Cans on Totes on the Platform:0
+Litter in/on Cans:0
+0____________________________________0
+Team Number:2053
+Match Number:42
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:1
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:0
+Totes on Platform:4
+Highest Level Tote/Can Stacked:2
+Cans on Totes on the Platform:0
+Litter in/on Cans:0
+0____________________________________0
+Team Number:2053
+Match Number:50
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:1
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:0
+Totes on Platform:2
+Highest Level Tote/Can Stacked:7
+Cans on Totes on the Platform:1
+Litter in/on Cans:1
+0____________________________________0
+Team Number:2053
+Match Number:55
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:0
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:0
+Totes on Platform:6
+Highest Level Tote/Can Stacked:4
+Cans on Totes on the Platform:0
+Litter in/on Cans:0
+0____________________________________0
