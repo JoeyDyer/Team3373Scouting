@@ -43,7 +43,7 @@ Team Number Alliance Zone  Alliance Zone Totes  Alliance Zone Cans  Game Pieces 
 
 
 
-3939        0.8            0.8                  0.2               0.0                0.4                 0.4             3.3999999999999995              2.6              0.8          0.0
+NO 3939        0.8            0.8                  0.2               0.0                0.4                 0.4             3.3999999999999995              2.6              0.8          0.0
 
 
 

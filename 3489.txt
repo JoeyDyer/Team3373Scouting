@@ -1,0 +1,52 @@
+Team Number:3489
+Match Number:4
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:1
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:1
+Totes on Platform:2
+Highest Level Tote/Can Stacked:2
+Cans on Totes on the Platform:1
+Litter in/on Cans:1
+0____________________________________0
+Team Number:3489
+Match Number:12
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:1
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:1
+Totes on Platform:7
+Highest Level Tote/Can Stacked:4
+Cans on Totes on the Platform:1
+Litter in/on Cans:1
+0____________________________________0
+Team Number:3489
+Match Number:47
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:0
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:0
+Totes on Platform:8
+Highest Level Tote/Can Stacked:4
+Cans on Totes on the Platform:1
+Litter in/on Cans:1
+0____________________________________0
+Team Number:3489
+Match Number:61
+Alliance Zone:1
+Totes in Alliance Zone:0
+Cans in Alliance Zone:1
+Game Pieces on/off Step:0
+Highest Tote Stacked:0
+Cans on Platform:1
+Totes on Platform:9
+Highest Level Tote/Can Stacked:5
+Cans on Totes on the Platform:1
+Litter in/on Cans:1
+0____________________________________0
